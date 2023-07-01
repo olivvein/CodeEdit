@@ -1,0 +1,4195 @@
+commit 9f0a28ba8d9a961936b4e244d01cea33c20104d5
+Merge: 39fc8a74 c6b83c20
+Author: olivvein <olivier.veinand@gmail.com>
+Date:   Tue Jun 27 17:47:29 2023 +0200
+
+    On chatGptView: !!GitHub_Desktop<chatGptView>
+
+diff --cc CodeEdit.xcodeproj/project.pbxproj
+index fda81b37,fda81b37..a1d8a7bd
+--- a/CodeEdit.xcodeproj/project.pbxproj
++++ b/CodeEdit.xcodeproj/project.pbxproj
+@@@ -43,7 -43,7 +43,6 @@@
+  		2813F93927ECC4C300E305E4 /* NavigatorSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287776E627E3413200D46668 /* NavigatorSidebarView.swift */; };
+  		2816F594280CF50500DD548B /* CodeEditSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 2816F593280CF50500DD548B /* CodeEditSymbols */; };
+  		283BDCBD2972EEBD002AFF81 /* Package.resolved in Resources */ = {isa = PBXBuildFile; fileRef = 283BDCBC2972EEBD002AFF81 /* Package.resolved */; };
+--		283BDCC52972F236002AFF81 /* AcknowledgementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 283BDCC42972F236002AFF81 /* AcknowledgementsTests.swift */; };
+  		2847019E27FDDF7600F87B6B /* OutlineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847019D27FDDF7600F87B6B /* OutlineView.swift */; };
+  		284DC84F2978B7B400BF2770 /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 284DC84E2978B7B400BF2770 /* ContributorsView.swift */; };
+  		284DC8512978BA2600BF2770 /* .all-contributorsrc in Resources */ = {isa = PBXBuildFile; fileRef = 284DC8502978BA2600BF2770 /* .all-contributorsrc */; };
+@@@ -65,29 -65,29 +64,31 @@@
+  		2B7AC06B282452FB0082A5B8 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B7AC06A282452FB0082A5B8 /* Media.xcassets */; };
+  		2BE487EF28245162003F3F64 /* FinderSync.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE487EE28245162003F3F64 /* FinderSync.swift */; };
+  		2BE487F428245162003F3F64 /* OpenWithCodeEdit.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 2BE487EC28245162003F3F64 /* OpenWithCodeEdit.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+++		4687F93B2A03FB3C007EFCD7 /* ChatGptView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F93A2A03FB3C007EFCD7 /* ChatGptView.swift */; };
+++		4687F9432A040C2B007EFCD7 /* ChatGptApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9422A040C2B007EFCD7 /* ChatGptApi.swift */; };
+++		4687F9452A040C53007EFCD7 /* ChatGptApiModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9442A040C53007EFCD7 /* ChatGptApiModel.swift */; };
+++		4687F9472A040C81007EFCD7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9462A040C81007EFCD7 /* Constants.swift */; };
+++		4687F9492A040C9D007EFCD7 /* TextOutputFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9482A040C9D007EFCD7 /* TextOutputFormat.swift */; };
+++		4687F94C2A040D22007EFCD7 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = 4687F94B2A040D22007EFCD7 /* Splash */; };
+++		4687F94E2A040D22007EFCD7 /* SplashMarkdown in Frameworks */ = {isa = PBXBuildFile; productRef = 4687F94D2A040D22007EFCD7 /* SplashMarkdown */; };
+++		4687F9502A040E71007EFCD7 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F94F2A040E71007EFCD7 /* ChatViewModel.swift */; };
+++		4687F9522A040EA0007EFCD7 /* NotionDbPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9512A040EA0007EFCD7 /* NotionDbPage.swift */; };
+++		4687F9552A040ECE007EFCD7 /* NotionSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4687F9542A040ECE007EFCD7 /* NotionSwift */; };
+++		4687F9572A040F57007EFCD7 /* GptStreamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9562A040F57007EFCD7 /* GptStreamView.swift */; };
+++		4687F9592A040F85007EFCD7 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9582A040F85007EFCD7 /* MessageRowView.swift */; };
+++		4687F95B2A040FC1007EFCD7 /* ScrimLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F95A2A040FC1007EFCD7 /* ScrimLoader.swift */; };
+++		4687F95D2A04104F007EFCD7 /* MessageBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F95C2A04104F007EFCD7 /* MessageBubbleView.swift */; };
+++		4687F95F2A041099007EFCD7 /* HighlightedCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F95E2A041099007EFCD7 /* HighlightedCodeView.swift */; };
+++		4687F9622A041118007EFCD7 /* Highlightr in Frameworks */ = {isa = PBXBuildFile; productRef = 4687F9612A041118007EFCD7 /* Highlightr */; };
+++		4687F9652A0424E8007EFCD7 /* DockerRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9642A0424E8007EFCD7 /* DockerRunner.swift */; };
+++		4687F9672A042531007EFCD7 /* DockerRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4687F9662A042531007EFCD7 /* DockerRunnerView.swift */; };
+  		474397C52893AC4B00518C8C /* codeedit-midnight.json in Resources */ = {isa = PBXBuildFile; fileRef = 474397C42893AC4B00518C8C /* codeedit-midnight.json */; };
+  		4E7F066629602E7B00BB3C12 /* CodeEditSplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7F066529602E7B00BB3C12 /* CodeEditSplitViewController.swift */; };
+--		4EE96ECB2960565E00FFBEA8 /* DocumentsUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE96ECA2960565E00FFBEA8 /* DocumentsUnitTests.swift */; };
+--		4EE96ECE296059E000FFBEA8 /* NSHapticFeedbackPerformerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE96ECD296059E000FFBEA8 /* NSHapticFeedbackPerformerMock.swift */; };
+  		581BFB672926431000D251EC /* WelcomeWindowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BFB5A2926431000D251EC /* WelcomeWindowView.swift */; };
+  		581BFB682926431000D251EC /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BFB5B2926431000D251EC /* WelcomeView.swift */; };
+  		581BFB692926431000D251EC /* WelcomeActionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BFB5C2926431000D251EC /* WelcomeActionView.swift */; };
+  		581BFB6B2926431000D251EC /* RecentProjectItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 581BFB5E2926431000D251EC /* RecentProjectItem.swift */; };
+  		582213F0291834A500EFE361 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 582213EF291834A500EFE361 /* AboutView.swift */; };
+--		583E528C29361B39001AB554 /* CodeEditUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 583E527529361B39001AB554 /* CodeEditUITests.swift */; };
+--		583E528D29361B39001AB554 /* testHelpButtonDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527929361B39001AB554 /* testHelpButtonDark.1.png */; };
+--		583E528E29361B39001AB554 /* testEffectViewLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527A29361B39001AB554 /* testEffectViewLight.1.png */; };
+--		583E528F29361B39001AB554 /* testSegmentedControlLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527B29361B39001AB554 /* testSegmentedControlLight.1.png */; };
+--		583E529029361B39001AB554 /* testSegmentedControlProminentLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527C29361B39001AB554 /* testSegmentedControlProminentLight.1.png */; };
+--		583E529129361B39001AB554 /* testHelpButtonLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527D29361B39001AB554 /* testHelpButtonLight.1.png */; };
+--		583E529229361B39001AB554 /* testBranchPickerDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527E29361B39001AB554 /* testBranchPickerDark.1.png */; };
+--		583E529329361B39001AB554 /* testFontPickerViewDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E527F29361B39001AB554 /* testFontPickerViewDark.1.png */; };
+--		583E529429361B39001AB554 /* testFontPickerViewLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E528029361B39001AB554 /* testFontPickerViewLight.1.png */; };
+--		583E529529361B39001AB554 /* testSegmentedControlProminentDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E528129361B39001AB554 /* testSegmentedControlProminentDark.1.png */; };
+--		583E529629361B39001AB554 /* testSegmentedControlDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E528229361B39001AB554 /* testSegmentedControlDark.1.png */; };
+--		583E529729361B39001AB554 /* testEffectViewDark.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E528329361B39001AB554 /* testEffectViewDark.1.png */; };
+--		583E529829361B39001AB554 /* testBranchPickerLight.1.png in Resources */ = {isa = PBXBuildFile; fileRef = 583E528429361B39001AB554 /* testBranchPickerLight.1.png */; };
+--		583E529C29361BAB001AB554 /* SnapshotTesting in Frameworks */ = {isa = PBXBuildFile; productRef = 583E529B29361BAB001AB554 /* SnapshotTesting */; };
+  		5878DA82291863F900DD95A3 /* AcknowledgementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5878DA81291863F900DD95A3 /* AcknowledgementsView.swift */; };
+  		5878DA842918642000DD95A3 /* ParsePackagesResolved.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5878DA832918642000DD95A3 /* ParsePackagesResolved.swift */; };
+  		5878DA872918642F00DD95A3 /* AcknowledgementsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5878DA862918642F00DD95A3 /* AcknowledgementsViewModel.swift */; };
+@@@ -116,9 -116,9 +117,6 @@@
+  		58798285292ED0FB0085B254 /* TerminalEmulatorView+Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58798281292ED0FB0085B254 /* TerminalEmulatorView+Coordinator.swift */; };
+  		58798286292ED0FB0085B254 /* SwiftTerm+Color+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58798283292ED0FB0085B254 /* SwiftTerm+Color+Init.swift */; };
+  		5879828A292ED15F0085B254 /* SwiftTerm in Frameworks */ = {isa = PBXBuildFile; productRef = 58798289292ED15F0085B254 /* SwiftTerm */; };
+--		587B60F82934124200D5CD8F /* WorkspaceClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B60F72934124100D5CD8F /* WorkspaceClientTests.swift */; };
+--		587B61012934170A00D5CD8F /* UnitTests_Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B61002934170A00D5CD8F /* UnitTests_Extensions.swift */; };
+--		587B612E293419B700D5CD8F /* CodeFileTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B612D293419B700D5CD8F /* CodeFileTests.swift */; };
+  		587B9D57292FC27A00AC7927 /* FolderMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B9D54292FC27A00AC7927 /* FolderMonitor.swift */; };
+  		587B9D9F29300ABD00AC7927 /* SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B9D8829300ABD00AC7927 /* SegmentedControl.swift */; };
+  		587B9DA029300ABD00AC7927 /* PanelDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 587B9D8929300ABD00AC7927 /* PanelDivider.swift */; };
+@@@ -275,7 -275,7 +273,6 @@@
+  		6C48D8F72972E5F300D6D205 /* WindowObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D8F62972E5F300D6D205 /* WindowObserver.swift */; };
+  		6C5228B529A868BD00AC48F6 /* Environment+ContentInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5228B429A868BD00AC48F6 /* Environment+ContentInsets.swift */; };
+  		6C53AAD829A6C4FD00EE9ED6 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53AAD729A6C4FD00EE9ED6 /* SplitView.swift */; };
+--		6C5AB9D729C1496E003B5F96 /* SceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AB9D629C1496E003B5F96 /* SceneID.swift */; };
+  		6C5B63DE29C76213005454BA /* WindowCodeFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B63DD29C76213005454BA /* WindowCodeFileView.swift */; };
+  		6C5FDF7A29E6160000BC08C0 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FDF7929E6160000BC08C0 /* AppSettings.swift */; };
+  		6C7256D729A3D7D000C2D3E0 /* SplitViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7256D629A3D7D000C2D3E0 /* SplitViewControllerView.swift */; };
+@@@ -371,20 -371,20 +368,6 @@@
+  			remoteGlobalIDString = 2BE487EB28245162003F3F64;
+  			remoteInfo = OpenWithCodeEdit;
+  		};
+--		B658FB3E27DA9E1000EA4DBD /* PBXContainerItemProxy */ = {
+--			isa = PBXContainerItemProxy;
+--			containerPortal = B658FB2427DA9E0F00EA4DBD /* Project object */;
+--			proxyType = 1;
+--			remoteGlobalIDString = B658FB2B27DA9E0F00EA4DBD;
+--			remoteInfo = CodeEdit;
+--		};
+--		B658FB4827DA9E1000EA4DBD /* PBXContainerItemProxy */ = {
+--			isa = PBXContainerItemProxy;
+--			containerPortal = B658FB2427DA9E0F00EA4DBD /* Project object */;
+--			proxyType = 1;
+--			remoteGlobalIDString = B658FB2B27DA9E0F00EA4DBD;
+--			remoteInfo = CodeEdit;
+--		};
+  /* End PBXContainerItemProxy section */
+  
+  /* Begin PBXCopyFilesBuildPhase section */
+@@@ -474,6 -474,6 +457,20 @@@
+  		2BE487EC28245162003F3F64 /* OpenWithCodeEdit.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OpenWithCodeEdit.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+  		2BE487EE28245162003F3F64 /* FinderSync.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinderSync.swift; sourceTree = "<group>"; };
+  		2BE487F028245162003F3F64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+++		4687F93A2A03FB3C007EFCD7 /* ChatGptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptView.swift; sourceTree = "<group>"; usesTabs = 0; };
+++		4687F9422A040C2B007EFCD7 /* ChatGptApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptApi.swift; sourceTree = "<group>"; };
+++		4687F9442A040C53007EFCD7 /* ChatGptApiModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatGptApiModel.swift; sourceTree = "<group>"; };
+++		4687F9462A040C81007EFCD7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+++		4687F9482A040C9D007EFCD7 /* TextOutputFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextOutputFormat.swift; sourceTree = "<group>"; };
+++		4687F94F2A040E71007EFCD7 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+++		4687F9512A040EA0007EFCD7 /* NotionDbPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotionDbPage.swift; sourceTree = "<group>"; };
+++		4687F9562A040F57007EFCD7 /* GptStreamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GptStreamView.swift; sourceTree = "<group>"; };
+++		4687F9582A040F85007EFCD7 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
+++		4687F95A2A040FC1007EFCD7 /* ScrimLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrimLoader.swift; sourceTree = "<group>"; };
+++		4687F95C2A04104F007EFCD7 /* MessageBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubbleView.swift; sourceTree = "<group>"; };
+++		4687F95E2A041099007EFCD7 /* HighlightedCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighlightedCodeView.swift; sourceTree = "<group>"; };
+++		4687F9642A0424E8007EFCD7 /* DockerRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerRunner.swift; sourceTree = "<group>"; };
+++		4687F9662A042531007EFCD7 /* DockerRunnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DockerRunnerView.swift; sourceTree = "<group>"; };
+  		474397C42893AC4B00518C8C /* codeedit-midnight.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "codeedit-midnight.json"; sourceTree = "<group>"; };
+  		4E7F066529602E7B00BB3C12 /* CodeEditSplitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeEditSplitViewController.swift; sourceTree = "<group>"; };
+  		4EE96ECA2960565E00FFBEA8 /* DocumentsUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsUnitTests.swift; sourceTree = "<group>"; };
+@@@ -719,8 -719,8 +716,6 @@@
+  		B658FB3327DA9E1000EA4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+  		B658FB3627DA9E1000EA4DBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+  		B658FB3827DA9E1000EA4DBD /* CodeEdit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CodeEdit.entitlements; sourceTree = "<group>"; };
+--		B658FB3D27DA9E1000EA4DBD /* CodeEditTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+--		B658FB4727DA9E1000EA4DBD /* CodeEditUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeEditUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+  		B66A4E4429C8E86D004573B4 /* CommandsFixes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandsFixes.swift; sourceTree = "<group>"; };
+  		B66A4E4B29C9179B004573B4 /* CodeEditApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeEditApp.swift; sourceTree = "<group>"; };
+  		B66A4E4E29C917B8004573B4 /* WelcomeWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeWindow.swift; sourceTree = "<group>"; };
+@@@ -782,30 -782,30 +777,19 @@@
+  			buildActionMask = 2147483647;
+  			files = (
+  				58F2EB17292FB74D004A9BDE /* CodeEditTextView in Frameworks */,
+++				4687F9552A040ECE007EFCD7 /* NotionSwift in Frameworks */,
+++				4687F94C2A040D22007EFCD7 /* Splash in Frameworks */,
+  				58F2EB1E292FB954004A9BDE /* Sparkle in Frameworks */,
+  				6C147C4529A329350089B630 /* OrderedCollections in Frameworks */,
+++				4687F94E2A040D22007EFCD7 /* SplashMarkdown in Frameworks */,
+  				5879828A292ED15F0085B254 /* SwiftTerm in Frameworks */,
+  				6CDEFC9629E22C2700B7C684 /* Introspect in Frameworks */,
+++				4687F9622A041118007EFCD7 /* Highlightr in Frameworks */,
+  				2816F594280CF50500DD548B /* CodeEditSymbols in Frameworks */,
+  				6C81916B29B41DD300B75C92 /* DequeModule in Frameworks */,
+  			);
+  			runOnlyForDeploymentPostprocessing = 0;
+  		};
+--		B658FB3A27DA9E1000EA4DBD /* Frameworks */ = {
+--			isa = PBXFrameworksBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--				583E529C29361BAB001AB554 /* SnapshotTesting in Frameworks */,
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+--		B658FB4427DA9E1000EA4DBD /* Frameworks */ = {
+--			isa = PBXFrameworksBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+  /* End PBXFrameworksBuildPhase section */
+  
+  /* Begin PBXGroup section */
+@@@ -893,6 -893,6 +877,8 @@@
+  				200412EE280F3EAC00BCAF5C /* HistoryInspectorNoHistoryView.swift */,
+  				20EBB506280C32D300F3A5DA /* QuickHelpInspectorView.swift */,
+  				20D839AA280DEB2900B27357 /* NoSelectionInspectorView.swift */,
+++				4687F93A2A03FB3C007EFCD7 /* ChatGptView.swift */,
+++				4687F9662A042531007EFCD7 /* DockerRunnerView.swift */,
+  			);
+  			path = Views;
+  			sourceTree = "<group>";
+@@@ -1018,6 -1018,6 +1004,25 @@@
+  			path = OpenWithCodeEdit;
+  			sourceTree = "<group>";
+  		};
+++		4687F9402A040692007EFCD7 /* ChatGpt */ = {
+++			isa = PBXGroup;
+++			children = (
+++				4687F9422A040C2B007EFCD7 /* ChatGptApi.swift */,
+++				4687F9442A040C53007EFCD7 /* ChatGptApiModel.swift */,
+++				4687F9462A040C81007EFCD7 /* Constants.swift */,
+++				4687F9482A040C9D007EFCD7 /* TextOutputFormat.swift */,
+++				4687F94F2A040E71007EFCD7 /* ChatViewModel.swift */,
+++				4687F9512A040EA0007EFCD7 /* NotionDbPage.swift */,
+++				4687F9562A040F57007EFCD7 /* GptStreamView.swift */,
+++				4687F9582A040F85007EFCD7 /* MessageRowView.swift */,
+++				4687F95A2A040FC1007EFCD7 /* ScrimLoader.swift */,
+++				4687F95C2A04104F007EFCD7 /* MessageBubbleView.swift */,
+++				4687F95E2A041099007EFCD7 /* HighlightedCodeView.swift */,
+++				4687F9642A0424E8007EFCD7 /* DockerRunner.swift */,
+++			);
+++			path = ChatGpt;
+++			sourceTree = "<group>";
+++		};
+  		4EE96EC82960562000FFBEA8 /* Documents */ = {
+  			isa = PBXGroup;
+  			children = (
+@@@ -2069,8 -2069,8 +2074,6 @@@
+  			isa = PBXGroup;
+  			children = (
+  				B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */,
+--				B658FB3D27DA9E1000EA4DBD /* CodeEditTests.xctest */,
+--				B658FB4727DA9E1000EA4DBD /* CodeEditUITests.xctest */,
+  				2BE487EC28245162003F3F64 /* OpenWithCodeEdit.appex */,
+  			);
+  			name = Products;
+@@@ -2208,6 -2208,6 +2211,7 @@@
+  		B6EE988E27E8877C00CDD8AB /* InspectorSidebar */ = {
+  			isa = PBXGroup;
+  			children = (
+++				4687F9402A040692007EFCD7 /* ChatGpt */,
+  				20EBB50B280C382800F3A5DA /* Models */,
+  				20EBB4FF280C325000F3A5DA /* Views */,
+  				B6EE988F27E8879A00CDD8AB /* InspectorSidebarView.swift */,
+@@@ -2303,7 -2303,7 +2307,6 @@@
+  				B658FB2827DA9E0F00EA4DBD /* Sources */,
+  				B658FB2927DA9E0F00EA4DBD /* Frameworks */,
+  				B658FB2A27DA9E0F00EA4DBD /* Resources */,
+--				2B18499A27F8A7A0005119F0 /* Mark // swiftlint:disable:all as errors | Run Script */,
+  				04ADA0CC27E6043B00BF00B2 /* Add TODO/FIXME as warnings | Run Script */,
+  				04C3255A2801B43A00C8DA2D /* Embed Frameworks */,
+  				2BE487F528245162003F3F64 /* Embed Foundation Extensions */,
+@@@ -2311,7 -2311,7 +2314,6 @@@
+  			buildRules = (
+  			);
+  			dependencies = (
+--				287136B3292A408700E9F5F4 /* PBXTargetDependency */,
+  				2BE487F328245162003F3F64 /* PBXTargetDependency */,
+  			);
+  			name = CodeEdit;
+@@@ -2323,52 -2323,52 +2325,15 @@@
+  				6C147C4429A329350089B630 /* OrderedCollections */,
+  				6C81916A29B41DD300B75C92 /* DequeModule */,
+  				6CDEFC9529E22C2700B7C684 /* Introspect */,
+++				4687F94B2A040D22007EFCD7 /* Splash */,
+++				4687F94D2A040D22007EFCD7 /* SplashMarkdown */,
+++				4687F9542A040ECE007EFCD7 /* NotionSwift */,
+++				4687F9612A041118007EFCD7 /* Highlightr */,
+  			);
+  			productName = CodeEdit;
+  			productReference = B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */;
+  			productType = "com.apple.product-type.application";
+  		};
+--		B658FB3C27DA9E1000EA4DBD /* CodeEditTests */ = {
+--			isa = PBXNativeTarget;
+--			buildConfigurationList = B658FB5427DA9E1000EA4DBD /* Build configuration list for PBXNativeTarget "CodeEditTests" */;
+--			buildPhases = (
+--				B658FB3927DA9E1000EA4DBD /* Sources */,
+--				B658FB3A27DA9E1000EA4DBD /* Frameworks */,
+--				B658FB3B27DA9E1000EA4DBD /* Resources */,
+--			);
+--			buildRules = (
+--			);
+--			dependencies = (
+--				B658FB3F27DA9E1000EA4DBD /* PBXTargetDependency */,
+--			);
+--			name = CodeEditTests;
+--			packageProductDependencies = (
+--				583E529B29361BAB001AB554 /* SnapshotTesting */,
+--			);
+--			productName = CodeEditTests;
+--			productReference = B658FB3D27DA9E1000EA4DBD /* CodeEditTests.xctest */;
+--			productType = "com.apple.product-type.bundle.unit-test";
+--		};
+--		B658FB4627DA9E1000EA4DBD /* CodeEditUITests */ = {
+--			isa = PBXNativeTarget;
+--			buildConfigurationList = B658FB5727DA9E1000EA4DBD /* Build configuration list for PBXNativeTarget "CodeEditUITests" */;
+--			buildPhases = (
+--				B658FB4327DA9E1000EA4DBD /* Sources */,
+--				B658FB4427DA9E1000EA4DBD /* Frameworks */,
+--				B658FB4527DA9E1000EA4DBD /* Resources */,
+--			);
+--			buildRules = (
+--			);
+--			dependencies = (
+--				B658FB4927DA9E1000EA4DBD /* PBXTargetDependency */,
+--			);
+--			name = CodeEditUITests;
+--			packageProductDependencies = (
+--			);
+--			productName = CodeEditUITests;
+--			productReference = B658FB4727DA9E1000EA4DBD /* CodeEditUITests.xctest */;
+--			productType = "com.apple.product-type.bundle.ui-testing";
+--		};
+  /* End PBXNativeTarget section */
+  
+  /* Begin PBXProject section */
+@@@ -2377,7 -2377,7 +2342,7 @@@
+  			attributes = {
+  				BuildIndependentTargetsInParallel = 1;
+  				LastSwiftUpdateCheck = 1330;
+--				LastUpgradeCheck = 1410;
+++				LastUpgradeCheck = 1430;
+  				TargetAttributes = {
+  					2BE487EB28245162003F3F64 = {
+  						CreatedOnToolsVersion = 13.3.1;
+@@@ -2385,15 -2385,15 +2350,6 @@@
+  					B658FB2B27DA9E0F00EA4DBD = {
+  						CreatedOnToolsVersion = 13.1;
+  					};
+--					B658FB3C27DA9E1000EA4DBD = {
+--						CreatedOnToolsVersion = 13.1;
+--						TestTargetID = B658FB2B27DA9E0F00EA4DBD;
+--					};
+--					B658FB4627DA9E1000EA4DBD = {
+--						CreatedOnToolsVersion = 13.1;
+--						LastSwiftMigration = 1410;
+--						TestTargetID = B658FB2B27DA9E0F00EA4DBD;
+--					};
+  				};
+  			};
+  			buildConfigurationList = B658FB2727DA9E0F00EA4DBD /* Build configuration list for PBXProject "CodeEdit" */;
+@@@ -2407,21 -2407,21 +2363,21 @@@
+  			mainGroup = B658FB2327DA9E0F00EA4DBD;
+  			packageReferences = (
+  				2816F592280CF50500DD548B /* XCRemoteSwiftPackageReference "CodeEditSymbols" */,
+--				287136B1292A407E00E9F5F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */,
+  				58798288292ED15F0085B254 /* XCRemoteSwiftPackageReference "SwiftTerm" */,
+  				58F2EB15292FB74D004A9BDE /* XCRemoteSwiftPackageReference "CodeEditTextView" */,
+  				58F2EB1C292FB954004A9BDE /* XCRemoteSwiftPackageReference "Sparkle" */,
+  				583E529A29361BAB001AB554 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */,
+  				6C147C4329A329350089B630 /* XCRemoteSwiftPackageReference "swift-collections" */,
+  				6CDEFC9429E22C2700B7C684 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+++				4687F94A2A040D22007EFCD7 /* XCRemoteSwiftPackageReference "Splash" */,
+++				4687F9532A040ECE007EFCD7 /* XCRemoteSwiftPackageReference "NotionSwift" */,
+++				4687F9602A041118007EFCD7 /* XCRemoteSwiftPackageReference "Highlightr" */,
+  			);
+  			productRefGroup = B658FB2D27DA9E0F00EA4DBD /* Products */;
+  			projectDirPath = "";
+  			projectRoot = "";
+  			targets = (
+  				B658FB2B27DA9E0F00EA4DBD /* CodeEdit */,
+--				B658FB3C27DA9E1000EA4DBD /* CodeEditTests */,
+--				B658FB4627DA9E1000EA4DBD /* CodeEditUITests */,
+  				2BE487EB28245162003F3F64 /* OpenWithCodeEdit */,
+  			);
+  		};
+@@@ -2456,32 -2456,32 +2412,6 @@@
+  			);
+  			runOnlyForDeploymentPostprocessing = 0;
+  		};
+--		B658FB3B27DA9E1000EA4DBD /* Resources */ = {
+--			isa = PBXResourcesBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--				583E529329361B39001AB554 /* testFontPickerViewDark.1.png in Resources */,
+--				583E529129361B39001AB554 /* testHelpButtonLight.1.png in Resources */,
+--				583E529029361B39001AB554 /* testSegmentedControlProminentLight.1.png in Resources */,
+--				583E528F29361B39001AB554 /* testSegmentedControlLight.1.png in Resources */,
+--				583E529429361B39001AB554 /* testFontPickerViewLight.1.png in Resources */,
+--				583E529729361B39001AB554 /* testEffectViewDark.1.png in Resources */,
+--				583E529829361B39001AB554 /* testBranchPickerLight.1.png in Resources */,
+--				583E528E29361B39001AB554 /* testEffectViewLight.1.png in Resources */,
+--				583E529229361B39001AB554 /* testBranchPickerDark.1.png in Resources */,
+--				583E529529361B39001AB554 /* testSegmentedControlProminentDark.1.png in Resources */,
+--				583E528D29361B39001AB554 /* testHelpButtonDark.1.png in Resources */,
+--				583E529629361B39001AB554 /* testSegmentedControlDark.1.png in Resources */,
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+--		B658FB4527DA9E1000EA4DBD /* Resources */ = {
+--			isa = PBXResourcesBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+  /* End PBXResourcesBuildPhase section */
+  
+  /* Begin PBXShellScriptBuildPhase section */
+@@@ -2504,25 -2504,25 +2434,6 @@@
+  			shellPath = /bin/sh;
+  			shellScript = "TAGS=\"TODO:|FIXME:\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ warning: \\$1/\"\n";
+  		};
+--		2B18499A27F8A7A0005119F0 /* Mark // swiftlint:disable:all as errors | Run Script */ = {
+--			isa = PBXShellScriptBuildPhase;
+--			alwaysOutOfDate = 1;
+--			buildActionMask = 2147483647;
+--			files = (
+--			);
+--			inputFileListPaths = (
+--			);
+--			inputPaths = (
+--			);
+--			name = "Mark // swiftlint:disable:all as errors | Run Script";
+--			outputFileListPaths = (
+--			);
+--			outputPaths = (
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--			shellPath = /bin/sh;
+--			shellScript = "TAGS=\"\\/\\/ swiftlint:disable all\"\necho \"searching ${SRCROOT} for ${TAGS}\"\nfind \"${SRCROOT}\" \\( -name \"*.swift\" \\) -print0 | xargs -0 egrep --with-filename --line-number --only-matching \"($TAGS).*\\$\" | perl -p -e \"s/($TAGS)/ error: Usage of \\$1 is prohibited/\"\n";
+--		};
+  /* End PBXShellScriptBuildPhase section */
+  
+  /* Begin PBXSourcesBuildPhase section */
+@@@ -2555,6 -2555,6 +2466,7 @@@
+  				587B9E9229301D8F00AC7927 /* BitBucketAccount.swift in Sources */,
+  				DE513F52281B672D002260B9 /* TabBarAccessory.swift in Sources */,
+  				2813F93927ECC4C300E305E4 /* NavigatorSidebarView.swift in Sources */,
+++				4687F95D2A04104F007EFCD7 /* MessageBubbleView.swift in Sources */,
+  				587B9E8A29301D8F00AC7927 /* GitHubIssue.swift in Sources */,
+  				6CAAF69429BCD78600A1F48A /* (null) in Sources */,
+  				DE513F54281DE5D0002260B9 /* TabBarXcode.swift in Sources */,
+@@@ -2576,8 -2576,8 +2488,10 @@@
+  				5882252E292C280D00E83CDE /* StatusBarMaximizeButton.swift in Sources */,
+  				6C4104E9297C970F00F472BA /* AboutDefaultView.swift in Sources */,
+  				587B9E6F29301D8F00AC7927 /* GitLabProjectAccess.swift in Sources */,
+++				4687F9502A040E71007EFCD7 /* ChatViewModel.swift in Sources */,
+  				587B9E6929301D8F00AC7927 /* GitLabEvent.swift in Sources */,
+  				587B9E5E29301D8F00AC7927 /* GitLabCommitRouter.swift in Sources */,
+++				4687F9432A040C2B007EFCD7 /* ChatGptApi.swift in Sources */,
+  				58F2EB0D292FB2B0004A9BDE /* ThemeSettings.swift in Sources */,
+  				587B9D9F29300ABD00AC7927 /* SegmentedControl.swift in Sources */,
+  				6C7256D729A3D7D000C2D3E0 /* SplitViewControllerView.swift in Sources */,
+@@@ -2605,6 -2605,6 +2519,8 @@@
+  				20EBB50F280C389300F3A5DA /* FileInspectorModel.swift in Sources */,
+  				5878DAB1291D627C00DD95A3 /* PathBarComponent.swift in Sources */,
+  				58822533292C280D00E83CDE /* StatusBarTabType.swift in Sources */,
+++				4687F9452A040C53007EFCD7 /* ChatGptApiModel.swift in Sources */,
+++				4687F93B2A03FB3C007EFCD7 /* ChatGptView.swift in Sources */,
+  				587B9E6E29301D8F00AC7927 /* GitLabProject.swift in Sources */,
+  				58798234292E30B90085B254 /* FeedbackIssueArea.swift in Sources */,
+  				587B9E5F29301D8F00AC7927 /* GitLabProjectRouter.swift in Sources */,
+@@@ -2625,6 -2625,6 +2541,7 @@@
+  				B6EE989227E887C600CDD8AB /* InspectorSidebarToolbarTop.swift in Sources */,
+  				B66A4E4C29C9179B004573B4 /* CodeEditApp.swift in Sources */,
+  				4E7F066629602E7B00BB3C12 /* CodeEditSplitViewController.swift in Sources */,
+++				4687F9592A040F85007EFCD7 /* MessageRowView.swift in Sources */,
+  				587B9E8D29301D8F00AC7927 /* GitHubAccount.swift in Sources */,
+  				201169E72837B5CA00F92B46 /* SourceControlModel.swift in Sources */,
+  				58822528292C280D00E83CDE /* StatusBarEncodingSelector.swift in Sources */,
+@@@ -2670,6 -2670,6 +2587,7 @@@
+  				201169E22837B3D800F92B46 /* SourceControlNavigatorChangesView.swift in Sources */,
+  				20EBB507280C32D300F3A5DA /* QuickHelpInspectorView.swift in Sources */,
+  				850C631029D6B01D00E1444C /* SettingsView.swift in Sources */,
+++				4687F9472A040C81007EFCD7 /* Constants.swift in Sources */,
+  				DE6405A62817734700881FDF /* TabBarNative.swift in Sources */,
+  				587B9E5C29301D8F00AC7927 /* Parameters.swift in Sources */,
+  				58798235292E30B90085B254 /* FeedbackModel.swift in Sources */,
+@@@ -2712,7 -2712,7 +2630,6 @@@
+  				6CB9144B29BEC7F100BC47F2 /* (null) in Sources */,
+  				587B9E7429301D8F00AC7927 /* URL+URLParameters.swift in Sources */,
+  				581BFB6B2926431000D251EC /* RecentProjectItem.swift in Sources */,
+--				6C5AB9D729C1496E003B5F96 /* SceneID.swift in Sources */,
+  				587B9DA429300ABD00AC7927 /* OverlayPanel.swift in Sources */,
+  				58D01C95293167DC00C5B6B4 /* Bundle+Info.swift in Sources */,
+  				587D9B762933BF5700BF7490 /* Mocks.swift in Sources */,
+@@@ -2741,6 -2741,6 +2658,7 @@@
+  				58822531292C280D00E83CDE /* View+isHovering.swift in Sources */,
+  				587B9E9929301D8F00AC7927 /* GitChangedFile.swift in Sources */,
+  				6C147C4B29A32A7B0089B630 /* Environment+SplitEditor.swift in Sources */,
+++				4687F9492A040C9D007EFCD7 /* TextOutputFormat.swift in Sources */,
+  				2897E1C72979A29200741E32 /* OffsettableScrollView.swift in Sources */,
+  				58F2EB0E292FB2B0004A9BDE /* SoftwareUpdater.swift in Sources */,
+  				587B9E9529301D8F00AC7927 /* BitBucketUser.swift in Sources */,
+@@@ -2752,9 -2752,9 +2670,11 @@@
+  				B685DE7929CC9CCD002860C8 /* StatusBarIcon.swift in Sources */,
+  				587B9DA629300ABD00AC7927 /* ToolbarBranchPicker.swift in Sources */,
+  				58F2EB05292FB2B0004A9BDE /* Settings.swift in Sources */,
+++				4687F95F2A041099007EFCD7 /* HighlightedCodeView.swift in Sources */,
+  				6CBD1BC62978DE53006639D5 /* Font+Caption3.swift in Sources */,
+  				287776EF27E3515300D46668 /* TabBarItemView.swift in Sources */,
+  				B6E41C9429DEAE260088F9F4 /* SourceControlAccount.swift in Sources */,
+++				4687F9522A040EA0007EFCD7 /* NotionDbPage.swift in Sources */,
+  				2806E9022979588B000040F4 /* Contributor.swift in Sources */,
+  				58D01C98293167DC00C5B6B4 /* String+RemoveOccurrences.swift in Sources */,
+  				5878DAA8291AE76700DD95A3 /* QuickOpenItem.swift in Sources */,
+@@@ -2788,6 -2788,6 +2708,7 @@@
+  				587B9E7629301D8F00AC7927 /* GitTime.swift in Sources */,
+  				2072FA16280D83A500C7F8D4 /* FileTypeList.swift in Sources */,
+  				587B9E5D29301D8F00AC7927 /* GitLabUserRouter.swift in Sources */,
+++				4687F95B2A040FC1007EFCD7 /* ScrimLoader.swift in Sources */,
+  				58822530292C280D00E83CDE /* FilterTextField.swift in Sources */,
+  				6C82D6B929BFE34900495C54 /* HelpCommands.swift in Sources */,
+  				6C147C4929A32A080089B630 /* EditorView.swift in Sources */,
+@@@ -2804,12 -2804,12 +2725,15 @@@
+  				B6F0517929D9E3C900D72287 /* SourceControlGitView.swift in Sources */,
+  				587B9E8329301D8F00AC7927 /* GitHubPullRequest.swift in Sources */,
+  				5878DA82291863F900DD95A3 /* AcknowledgementsView.swift in Sources */,
+++				4687F9652A0424E8007EFCD7 /* DockerRunner.swift in Sources */,
+  				587B9E8529301D8F00AC7927 /* GitHubReview.swift in Sources */,
+  				58D01C9A293167DC00C5B6B4 /* CodeEditKeychain.swift in Sources */,
+  				20D839AB280DEB2900B27357 /* NoSelectionInspectorView.swift in Sources */,
+  				587B9E5A29301D8F00AC7927 /* GitCloneView.swift in Sources */,
+  				58D01C99293167DC00C5B6B4 /* String+MD5.swift in Sources */,
+++				4687F9672A042531007EFCD7 /* DockerRunnerView.swift in Sources */,
+  				20EBB505280C329800F3A5DA /* HistoryInspectorItemView.swift in Sources */,
+++				4687F9572A040F57007EFCD7 /* GptStreamView.swift in Sources */,
+  				5878DAB2291D627C00DD95A3 /* PathBarView.swift in Sources */,
+  				043C321627E3201F006AE443 /* WorkspaceDocument.swift in Sources */,
+  				58F2EAEC292FB2B0004A9BDE /* IgnoredFiles.swift in Sources */,
+@@@ -2852,49 -2852,49 +2776,14 @@@
+  			);
+  			runOnlyForDeploymentPostprocessing = 0;
+  		};
+--		B658FB3927DA9E1000EA4DBD /* Sources */ = {
+--			isa = PBXSourcesBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--				583E528C29361B39001AB554 /* CodeEditUITests.swift in Sources */,
+--				587B60F82934124200D5CD8F /* WorkspaceClientTests.swift in Sources */,
+--				587B61012934170A00D5CD8F /* UnitTests_Extensions.swift in Sources */,
+--				283BDCC52972F236002AFF81 /* AcknowledgementsTests.swift in Sources */,
+--				4EE96ECB2960565E00FFBEA8 /* DocumentsUnitTests.swift in Sources */,
+--				4EE96ECE296059E000FFBEA8 /* NSHapticFeedbackPerformerMock.swift in Sources */,
+--				587B612E293419B700D5CD8F /* CodeFileTests.swift in Sources */,
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+--		B658FB4327DA9E1000EA4DBD /* Sources */ = {
+--			isa = PBXSourcesBuildPhase;
+--			buildActionMask = 2147483647;
+--			files = (
+--			);
+--			runOnlyForDeploymentPostprocessing = 0;
+--		};
+  /* End PBXSourcesBuildPhase section */
+  
+  /* Begin PBXTargetDependency section */
+--		287136B3292A408700E9F5F4 /* PBXTargetDependency */ = {
+--			isa = PBXTargetDependency;
+--			productRef = 287136B2292A408700E9F5F4 /* SwiftLint */;
+--		};
+  		2BE487F328245162003F3F64 /* PBXTargetDependency */ = {
+  			isa = PBXTargetDependency;
+  			target = 2BE487EB28245162003F3F64 /* OpenWithCodeEdit */;
+  			targetProxy = 2BE487F228245162003F3F64 /* PBXContainerItemProxy */;
+  		};
+--		B658FB3F27DA9E1000EA4DBD /* PBXTargetDependency */ = {
+--			isa = PBXTargetDependency;
+--			target = B658FB2B27DA9E0F00EA4DBD /* CodeEdit */;
+--			targetProxy = B658FB3E27DA9E1000EA4DBD /* PBXContainerItemProxy */;
+--		};
+--		B658FB4927DA9E1000EA4DBD /* PBXTargetDependency */ = {
+--			isa = PBXTargetDependency;
+--			target = B658FB2B27DA9E0F00EA4DBD /* CodeEdit */;
+--			targetProxy = B658FB4827DA9E1000EA4DBD /* PBXContainerItemProxy */;
+--		};
+  /* End PBXTargetDependency section */
+  
+  /* Begin PBXVariantGroup section */
+@@@ -2984,7 -2984,7 +2873,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3006,61 -3006,61 +2895,6 @@@
+  			};
+  			name = Alpha;
+  		};
+--		28052DEC2973045200F4F90A /* Alpha */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFC29730DF600F4F90A /* Alpha.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				BUNDLE_LOADER = "$(TEST_HOST)";
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MACOSX_DEPLOYMENT_TARGET = 13.0;
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditTests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_VERSION = 5.0;
+--				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeEdit.app/Contents/MacOS/CodeEdit";
+--			};
+--			name = Alpha;
+--		};
+--		28052DED2973045200F4F90A /* Alpha */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFC29730DF600F4F90A /* Alpha.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				CLANG_ENABLE_MODULES = YES;
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditUITests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				PROVISIONING_PROFILE = "";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditUITests/Features/CodeEditUI/CodeEditUITests-Bridging-Header.h";
+--				SWIFT_VERSION = 5.0;
+--				TEST_TARGET_NAME = CodeEdit;
+--			};
+--			name = Alpha;
+--		};
+  		28052DEE2973045200F4F90A /* Alpha */ = {
+  			isa = XCBuildConfiguration;
+  			baseConfigurationReference = 28052DFC29730DF600F4F90A /* Alpha.xcconfig */;
+@@@ -3169,7 -3169,7 +3003,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3191,61 -3191,61 +3025,6 @@@
+  			};
+  			name = Beta;
+  		};
+--		28052DF12973045C00F4F90A /* Beta */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFD29730E0300F4F90A /* Beta.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				BUNDLE_LOADER = "$(TEST_HOST)";
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MACOSX_DEPLOYMENT_TARGET = 13.0;
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditTests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_VERSION = 5.0;
+--				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeEdit.app/Contents/MacOS/CodeEdit";
+--			};
+--			name = Beta;
+--		};
+--		28052DF22973045C00F4F90A /* Beta */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFD29730E0300F4F90A /* Beta.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				CLANG_ENABLE_MODULES = YES;
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditUITests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				PROVISIONING_PROFILE = "";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditUITests/Features/CodeEditUI/CodeEditUITests-Bridging-Header.h";
+--				SWIFT_VERSION = 5.0;
+--				TEST_TARGET_NAME = CodeEdit;
+--			};
+--			name = Beta;
+--		};
+  		28052DF32973045C00F4F90A /* Beta */ = {
+  			isa = XCBuildConfiguration;
+  			baseConfigurationReference = 28052DFD29730E0300F4F90A /* Beta.xcconfig */;
+@@@ -3487,7 -3487,7 +3266,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3522,7 -3522,7 +3301,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3544,117 -3544,117 +3323,6 @@@
+  			};
+  			name = Release;
+  		};
+--		B658FB5527DA9E1000EA4DBD /* Debug */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFB29730DE300F4F90A /* Debug.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				BUNDLE_LOADER = "$(TEST_HOST)";
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MACOSX_DEPLOYMENT_TARGET = 13.0;
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditTests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_VERSION = 5.0;
+--				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeEdit.app/Contents/MacOS/CodeEdit";
+--			};
+--			name = Debug;
+--		};
+--		B658FB5627DA9E1000EA4DBD /* Release */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFE29730E0B00F4F90A /* Release.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				BUNDLE_LOADER = "$(TEST_HOST)";
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MACOSX_DEPLOYMENT_TARGET = 13.0;
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditTests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_VERSION = 5.0;
+--				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CodeEdit.app/Contents/MacOS/CodeEdit";
+--			};
+--			name = Release;
+--		};
+--		B658FB5827DA9E1000EA4DBD /* Debug */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFB29730DE300F4F90A /* Debug.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				CLANG_ENABLE_MODULES = YES;
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditUITests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				PROVISIONING_PROFILE = "";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditUITests/Features/CodeEditUI/CodeEditUITests-Bridging-Header.h";
+--				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+--				SWIFT_VERSION = 5.0;
+--				TEST_TARGET_NAME = CodeEdit;
+--			};
+--			name = Debug;
+--		};
+--		B658FB5927DA9E1000EA4DBD /* Release */ = {
+--			isa = XCBuildConfiguration;
+--			baseConfigurationReference = 28052DFE29730E0B00F4F90A /* Release.xcconfig */;
+--			buildSettings = {
+--				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+--				CLANG_ENABLE_MODULES = YES;
+--				CODE_SIGN_STYLE = Automatic;
+--				COMBINE_HIDPI_IMAGES = YES;
+--				CURRENT_PROJECT_VERSION = 32;
+--				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+--				GENERATE_INFOPLIST_FILE = YES;
+--				LD_RUNPATH_SEARCH_PATHS = (
+--					"$(inherited)",
+--					"@executable_path/../Frameworks",
+--					"@loader_path/../Frameworks",
+--				);
+--				MARKETING_VERSION = 1.0;
+--				PRODUCT_BUNDLE_IDENTIFIER = austincondiff.CodeEditUITests;
+--				PRODUCT_NAME = "$(TARGET_NAME)";
+--				PROVISIONING_PROFILE = "";
+--				SWIFT_EMIT_LOC_STRINGS = NO;
+--				SWIFT_OBJC_BRIDGING_HEADER = "CodeEditUITests/Features/CodeEditUI/CodeEditUITests-Bridging-Header.h";
+--				SWIFT_VERSION = 5.0;
+--				TEST_TARGET_NAME = CodeEdit;
+--			};
+--			name = Release;
+--		};
+  /* End XCBuildConfiguration section */
+  
+  /* Begin XCConfigurationList section */
+@@@ -3691,28 -3691,28 +3359,6 @@@
+  			defaultConfigurationIsVisible = 0;
+  			defaultConfigurationName = Release;
+  		};
+--		B658FB5427DA9E1000EA4DBD /* Build configuration list for PBXNativeTarget "CodeEditTests" */ = {
+--			isa = XCConfigurationList;
+--			buildConfigurations = (
+--				B658FB5527DA9E1000EA4DBD /* Debug */,
+--				B658FB5627DA9E1000EA4DBD /* Release */,
+--				28052DEC2973045200F4F90A /* Alpha */,
+--				28052DF12973045C00F4F90A /* Beta */,
+--			);
+--			defaultConfigurationIsVisible = 0;
+--			defaultConfigurationName = Release;
+--		};
+--		B658FB5727DA9E1000EA4DBD /* Build configuration list for PBXNativeTarget "CodeEditUITests" */ = {
+--			isa = XCConfigurationList;
+--			buildConfigurations = (
+--				B658FB5827DA9E1000EA4DBD /* Debug */,
+--				B658FB5927DA9E1000EA4DBD /* Release */,
+--				28052DED2973045200F4F90A /* Alpha */,
+--				28052DF22973045C00F4F90A /* Beta */,
+--			);
+--			defaultConfigurationIsVisible = 0;
+--			defaultConfigurationName = Release;
+--		};
+  /* End XCConfigurationList section */
+  
+  /* Begin XCRemoteSwiftPackageReference section */
+@@@ -3724,12 -3724,12 +3370,28 @@@
+  				version = 0.1.2;
+  			};
+  		};
+--		287136B1292A407E00E9F5F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */ = {
+++		4687F94A2A040D22007EFCD7 /* XCRemoteSwiftPackageReference "Splash" */ = {
+  			isa = XCRemoteSwiftPackageReference;
+--			repositoryURL = "https://github.com/lukepistrol/SwiftLintPlugin";
+++			repositoryURL = "https://github.com/JohnSundell/Splash";
+  			requirement = {
+  				kind = upToNextMajorVersion;
+--				minimumVersion = 0.2.2;
+++				minimumVersion = 0.16.0;
+++			};
+++		};
+++		4687F9532A040ECE007EFCD7 /* XCRemoteSwiftPackageReference "NotionSwift" */ = {
+++			isa = XCRemoteSwiftPackageReference;
+++			repositoryURL = "https://github.com/chojnac/NotionSwift.git";
+++			requirement = {
+++				kind = upToNextMajorVersion;
+++				minimumVersion = 0.8.0;
+++			};
+++		};
+++		4687F9602A041118007EFCD7 /* XCRemoteSwiftPackageReference "Highlightr" */ = {
+++			isa = XCRemoteSwiftPackageReference;
+++			repositoryURL = "http://github.com/raspu/Highlightr";
+++			requirement = {
+++				kind = upToNextMajorVersion;
+++				minimumVersion = 2.0.0;
+  			};
+  		};
+  		583E529A29361BAB001AB554 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */ = {
+@@@ -3788,15 -3788,15 +3450,25 @@@
+  			package = 2816F592280CF50500DD548B /* XCRemoteSwiftPackageReference "CodeEditSymbols" */;
+  			productName = CodeEditSymbols;
+  		};
+--		287136B2292A408700E9F5F4 /* SwiftLint */ = {
+++		4687F94B2A040D22007EFCD7 /* Splash */ = {
+++			isa = XCSwiftPackageProductDependency;
+++			package = 4687F94A2A040D22007EFCD7 /* XCRemoteSwiftPackageReference "Splash" */;
+++			productName = Splash;
+++		};
+++		4687F94D2A040D22007EFCD7 /* SplashMarkdown */ = {
+++			isa = XCSwiftPackageProductDependency;
+++			package = 4687F94A2A040D22007EFCD7 /* XCRemoteSwiftPackageReference "Splash" */;
+++			productName = SplashMarkdown;
+++		};
+++		4687F9542A040ECE007EFCD7 /* NotionSwift */ = {
+  			isa = XCSwiftPackageProductDependency;
+--			package = 287136B1292A407E00E9F5F4 /* XCRemoteSwiftPackageReference "SwiftLintPlugin" */;
+--			productName = "plugin:SwiftLint";
+++			package = 4687F9532A040ECE007EFCD7 /* XCRemoteSwiftPackageReference "NotionSwift" */;
+++			productName = NotionSwift;
+  		};
+--		583E529B29361BAB001AB554 /* SnapshotTesting */ = {
+++		4687F9612A041118007EFCD7 /* Highlightr */ = {
+  			isa = XCSwiftPackageProductDependency;
+--			package = 583E529A29361BAB001AB554 /* XCRemoteSwiftPackageReference "swift-snapshot-testing" */;
+--			productName = SnapshotTesting;
+++			package = 4687F9602A041118007EFCD7 /* XCRemoteSwiftPackageReference "Highlightr" */;
+++			productName = Highlightr;
+  		};
+  		58798289292ED15F0085B254 /* SwiftTerm */ = {
+  			isa = XCSwiftPackageProductDependency;
+diff --cc CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+index 8084e1ec,8084e1ec..aea806e0
+--- a/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ b/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+@@@ -27,6 -27,6 +27,24 @@@
+          "version" : "0.6.2"
+        }
+      },
+++    {
+++      "identity" : "highlightr",
+++      "kind" : "remoteSourceControl",
+++      "location" : "http://github.com/raspu/Highlightr",
+++      "state" : {
+++        "revision" : "93199b9e434f04bda956a613af8f571933f9f037",
+++        "version" : "2.1.2"
+++      }
+++    },
+++    {
+++      "identity" : "notionswift",
+++      "kind" : "remoteSourceControl",
+++      "location" : "https://github.com/chojnac/NotionSwift.git",
+++      "state" : {
+++        "revision" : "56c0c3a0dca35583aab0ef26fe2694e4c303bb72",
+++        "version" : "0.8.0"
+++      }
+++    },
+      {
+        "identity" : "rearrange",
+        "kind" : "remoteSourceControl",
+@@@ -45,6 -45,6 +63,15 @@@
+          "version" : "2.3.0"
+        }
+      },
+++    {
+++      "identity" : "splash",
+++      "kind" : "remoteSourceControl",
+++      "location" : "https://github.com/JohnSundell/Splash",
+++      "state" : {
+++        "revision" : "7f4df436eb78fe64fe2c32c58006e9949fa28ad8",
+++        "version" : "0.16.0"
+++      }
+++    },
+      {
+        "identity" : "sttextview",
+        "kind" : "remoteSourceControl",
+diff --cc CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
+index 3f46d9ce,3f46d9ce..97eb1050
+--- a/CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
++++ b/CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
+@@@ -1,6 -1,6 +1,6 @@@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <Scheme
+--   LastUpgradeVersion = "1410"
+++   LastUpgradeVersion = "1430"
+     version = "1.3">
+     <BuildAction
+        parallelizeBuildables = "YES"
+diff --cc CodeEdit/CodeEdit.entitlements
+index 0a566b8e,0a566b8e..461123ca
+--- a/CodeEdit/CodeEdit.entitlements
++++ b/CodeEdit/CodeEdit.entitlements
+@@@ -2,11 -2,11 +2,6 @@@
+  <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+  <plist version="1.0">
+  <dict>
+--	<key>com.apple.security.application-groups</key>
+--	<array>
+--		<string>austincondiff.CodeEdit.shared</string>
+--		<string>$(TeamIdentifierPrefix)</string>
+--	</array>
+  	<key>com.apple.security.cs.allow-jit</key>
+  	<true/>
+  	<key>com.apple.security.cs.disable-library-validation</key>
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApi.swift
+index 00000000,6fb58e40..b52a730d
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApi.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApi.swift
+@@@ -1,0 -1,8 +1,164 @@@
++ //
+ -//  ChatGptApi.swift
+ -//  CodeEdit
+++//  ChatGPTAPI.swift
+++//  XCAChatGPT
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Alfian Losari on 01/02/23.
++ //
++ 
++ import Foundation
+++
+++class ChatGPTAPI: @unchecked Sendable {
+++    
+++    private let systemMessage: MessageGPT
+++    private let temperature: Double
+++    private let model: String
+++    
+++    @Published var apiKey: String
+++    private var historyList = [MessageGPT]()
+++    private let urlSession = URLSession.shared
+++    private var urlRequest: URLRequest {
+++        let url = URL(string: "https://api.openai.com/v1/chat/completions")!
+++        var urlRequest = URLRequest(url: url)
+++        urlRequest.httpMethod = "POST"
+++        headers.forEach {  urlRequest.setValue($1, forHTTPHeaderField: $0) }
+++        return urlRequest
+++    }
+++    
+++    let dateFormatter: DateFormatter = {
+++        let df = DateFormatter()
+++        df.dateFormat = "YYYY-MM-dd"
+++        return df
+++    }()
+++    
+++    private let jsonDecoder: JSONDecoder = {
+++        let jsonDecoder = JSONDecoder()
+++        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+++        return jsonDecoder
+++    }()
+++    
+++    private var headers: [String: String] {
+++        [
+++            "Content-Type": "application/json",
+++            "Authorization": "Bearer \(apiKey)"
+++        ]
+++    }
+++    
+++    
+++    init(apiKey: String, model: String = "gpt-3.5-turbo", systemPrompt: String = "You are a helpful assistant", temperature: Double = 0.5) {
+++        self.apiKey = apiKey
+++        self.model = model
+++        self.systemMessage = .init(role: "system", content: systemPrompt)
+++        self.temperature = temperature
+++    }
+++    
+++    private func generateMessages(from text: String) -> [MessageGPT] {
+++        var messages = [systemMessage] + historyList + [MessageGPT(role: "user", content: text)]
+++        
+++        if messages.contentCount > (4000 * 4) {
+++            _ = historyList.removeFirst()
+++            messages = generateMessages(from: text)
+++        }
+++        print(messages)
+++        return messages
+++    }
+++    
+++    private func jsonBody(text: String, stream: Bool = true) throws -> Data {
+++        let request = Request(model: model, temperature: temperature,
+++                              messages: generateMessages(from: text), stream: stream)
+++        return try JSONEncoder().encode(request)
+++    }
+++    
+++    private func appendToHistoryList(userText: String, responseText: String) {
+++        self.historyList.append(.init(role: "user", content: userText))
+++        self.historyList.append(.init(role: "assistant", content: responseText))
+++    }
+++    
+++    func sendMessageStream(text: String) async throws -> AsyncThrowingStream<String, Error> {
+++        var urlRequest = self.urlRequest
+++        urlRequest.httpBody = try jsonBody(text: text)
+++        
+++        let (result, response) = try await urlSession.bytes(for: urlRequest)
+++        
+++        guard let httpResponse = response as? HTTPURLResponse else {
+++            throw "Invalid response"
+++        }
+++        
+++        guard 200...299 ~= httpResponse.statusCode else {
+++            var errorText = ""
+++            for try await line in result.lines {
+++                errorText += line
+++            }
+++            
+++            if let data = errorText.data(using: .utf8), let errorResponse = try? jsonDecoder.decode(ErrorRootResponse.self, from: data).error {
+++                errorText = "\n\(errorResponse.message)"
+++            }
+++            
+++            throw "Bad Response: \(httpResponse.statusCode), \(errorText)"
+++        }
+++        
+++        return AsyncThrowingStream<String, Error> { continuation in
+++            Task(priority: .userInitiated) { [weak self] in
+++                guard let self else { return }
+++                do {
+++                    var responseText = ""
+++                    for try await line in result.lines {
+++                        if line.hasPrefix("data: "),
+++                           let data = line.dropFirst(6).data(using: .utf8),
+++                           let response = try? self.jsonDecoder.decode(StreamCompletionResponse.self, from: data),
+++                           let text = response.choices.first?.delta.content {
+++                            responseText += text
+++                            continuation.yield(text)
+++                        }
+++                    }
+++                    self.appendToHistoryList(userText: text, responseText: responseText)
+++                    continuation.finish()
+++                } catch {
+++                    continuation.finish(throwing: error)
+++                }
+++            }
+++        }
+++    }
+++    
+++    func sendMessage(_ text: String) async throws -> String {
+++        var urlRequest = self.urlRequest
+++        urlRequest.httpBody = try jsonBody(text: text, stream: false)
+++        
+++        let (data, response) = try await urlSession.data(for: urlRequest)
+++        
+++        guard let httpResponse = response as? HTTPURLResponse else {
+++            throw "Invalid response"
+++        }
+++        
+++        guard 200...299 ~= httpResponse.statusCode else {
+++            var error = "Bad Response: \(httpResponse.statusCode)"
+++            if let errorResponse = try? jsonDecoder.decode(ErrorRootResponse.self, from: data).error {
+++                error.append("\n\(errorResponse.message)")
+++            }
+++            throw error
+++        }
+++        
+++        do {
+++            let completionResponse = try self.jsonDecoder.decode(CompletionResponse.self, from: data)
+++            let responseText = completionResponse.choices.first?.message.content ?? ""
+++            self.appendToHistoryList(userText: text, responseText: responseText)
+++            return responseText
+++        } catch {
+++            throw error
+++        }
+++    }
+++    
+++    func deleteHistoryList() {
+++        self.historyList.removeAll()
+++    }
+++}
+++
+++extension String: CustomNSError {
+++    
+++    public var errorUserInfo: [String : Any] {
+++        [
+++            NSLocalizedDescriptionKey: self
+++        ]
+++    }
+++}
+++
+++
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApiModel.swift
+index 00000000,01b6fd4a..7259a6cc
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApiModel.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatGptApiModel.swift
+@@@ -1,0 -1,8 +1,137 @@@
++ //
+ -//  ChatGptApiModel.swift
+ -//  CodeEdit
+++//  ChatGPTAPIModels.swift
+++//  XCAChatGPT
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Alfian Losari on 03/03/23.
++ //
++ 
++ import Foundation
+++
+++struct MessageGPT: Codable,Hashable {
+++    let role: String
+++    let content: String
+++}
+++
+++extension Array where Element == MessageGPT {
+++    
+++    var contentCount: Int { reduce(0, { $0 + $1.content.count })}
+++}
+++
+++struct Request: Codable {
+++    let model: String
+++    let temperature: Double
+++    let messages: [MessageGPT]
+++    let stream: Bool
+++}
+++
+++struct ErrorRootResponse: Decodable {
+++    let error: ErrorResponse
+++}
+++
+++struct ErrorResponse: Decodable {
+++    let message: String
+++    let type: String?
+++}
+++
+++struct StreamCompletionResponse: Decodable {
+++    let choices: [StreamChoice]
+++}
+++
+++struct CompletionResponse: Decodable {
+++    let choices: [Choice]
+++    let usage: Usage?
+++}
+++
+++struct Usage: Decodable {
+++    let promptTokens: Int?
+++    let completionTokens: Int?
+++    let totalTokens: Int?
+++}
+++
+++struct Choice: Decodable {
+++    let message: MessageGPT
+++    let finishReason: String?
+++}
+++
+++struct StreamChoice: Decodable {
+++    let finishReason: String?
+++    let delta: StreamMessage
+++}
+++
+++struct StreamMessage: Decodable {
+++    let role: String?
+++    let content: String?
+++}
+++
+++//
+++//  MessageRow.swift
+++//  XCAChatGPT
+++//
+++//  Created by Alfian Losari on 02/02/23.
+++//
+++
+++import SwiftUI
+++
+++struct AttributedOutput {
+++    let string: String
+++    let results: [ParserResult]
+++}
+++
+++enum MessageRowType {
+++    case attributed(AttributedOutput)
+++    case rawText(String)
+++    case withoutCode(String)
+++    
+++    var text: String {
+++        switch self {
+++        case .attributed(let attributedOutput):
+++            return attributedOutput.string
+++        case .rawText(let string):
+++            return string
+++            
+++        case .withoutCode(let string):
+++            return string
+++        }
+++    }
+++}
+++
+++struct MessageCode:Identifiable{
+++    let id = UUID()
+++    var code:String
+++}
+++
+++struct MessageRow: Identifiable {
+++    
+++    let id = UUID()
+++    
+++    var isInteractingWithChatGPT: Bool
+++    
+++    let sendImage: String
+++    let send: MessageRowType
+++    var sendText: String {
+++        send.text
+++    }
+++    
+++    var responseCodes: [MessageCode]
+++    var responseWithoutCode:String
+++    
+++    let responseImage: String
+++    var response: MessageRowType?
+++    var responseText: String? {
+++        response?.text
+++    }
+++    
+++    var responseError: String?
+++    
+++}
+++
+++
+++struct ParserResult: Identifiable {
+++    
+++    let id = UUID()
+++    let attributedString: AttributedString
+++    let isCodeBlock: Bool
+++    let codeBlockLanguage: String?
+++    
+++}
+++
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/ChatViewModel.swift
+index 00000000,fe008f2f..bbcb3d51
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatViewModel.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/ChatViewModel.swift
+@@@ -1,0 -1,8 +1,219 @@@
++ //
+ -//  ChatViewModel.swift
+ -//  CodeEdit
+++//  ViewModel.swift
+++//  XCAChatGPT
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Alfian Losari on 02/02/23.
++ //
++ 
++ import Foundation
+++import SwiftUI
+++import AVKit
+++
+++class ViewModel: ObservableObject {
+++    
+++    @Published var isInteractingWithChatGPT = false
+++    @Published var messages: [MessageRow] = []
+++    @Published var inputMessage: String = ""
+++    @Published var sessionId: String = ""
+++    @Published var lastUserMessage: String = ""
+++    @Published var conversationTitleOk: String = "New Conversation"
+++    
+++    
+++    
+++    
+++    
+++    private var synthesizer: AVSpeechSynthesizer?
+++    
+++    
+++    @Published var api: ChatGPTAPI
+++    
+++    init(api: ChatGPTAPI, enableSpeech: Bool = false) {
+++        self.api = api
+++        
+++        if enableSpeech {
+++            synthesizer = .init()
+++        }
+++        
+++    }
+++    
+++    @MainActor
+++    func sendTapped() async {
+++        lastUserMessage=inputMessage
+++        let text = inputMessage
+++        inputMessage = ""
+++        
+++        await send(text: text)
+++    }
+++    
+++    func setSessionId(sessionId:String){
+++        self.sessionId=sessionId
+++    }
+++    
+++    @MainActor
+++    func clearMessages() {
+++        stopSpeaking()
+++        api.deleteHistoryList()
+++        withAnimation { [weak self] in
+++            self?.messages = []
+++        }
+++    }
+++    
+++    @MainActor
+++    func retry(message: MessageRow) async {
+++        guard let index = messages.firstIndex(where: { $0.id == message.id }) else {
+++            return
+++        }
+++        self.messages.remove(at: index)
+++        
+++        await send(text: message.sendText)
+++    }
+++    
+++    
+++    
+++    @MainActor
+++    private func send(text: String) async {
+++        isInteractingWithChatGPT = true
+++        var streamText = ""
+++        var messageRow = MessageRow(
+++            isInteractingWithChatGPT: true,
+++            sendImage: "profile",
+++            send: .rawText(text),
+++            responseCodes: [],
+++            responseWithoutCode:"",
+++            responseImage: "openai",
+++            response: .rawText(streamText),
+++            responseError: nil)
+++        
+++        self.messages.append(messageRow)
+++        
+++        do {
+++            let stream = try await api.sendMessageStream(text: text)
+++            for try await text in stream {
+++                streamText += text
+++                messageRow.response = .rawText(streamText.trimmingCharacters(in: .whitespacesAndNewlines))
+++                self.messages[self.messages.count - 1] = messageRow
+++            }
+++        } catch {
+++            messageRow.responseError = error.localizedDescription
+++        }
+++        messageRow.responseCodes=findCodeInText(text:messageRow.responseText ?? "")
+++        messageRow.response = .withoutCode(findNoCodeInText(text: messageRow.responseText ?? ""))
+++        messageRow.isInteractingWithChatGPT = false
+++        self.messages[self.messages.count - 1] = messageRow
+++        isInteractingWithChatGPT = false
+++        speakLastResponse()
+++        
+++    }
+++    
+++    func removeLang(bigString: String, searchString: String) -> String {
+++        var lines = bigString.components(separatedBy: "\n")
+++        
+++        // check if search string is at the beginning of the big string
+++        if lines[0].starts(with: searchString) {
+++            lines.removeFirst()
+++        }
+++        
+++        return lines.joined(separator: "\n")
+++    }
+++    
+++    
+++    
+++    
+++    
+++    func findCodeInText(text:String)->[MessageCode]{
+++        let codeRegex = try! NSRegularExpression(pattern: "```[\\s\\S]*?```", options: [])
+++        let range = NSRange(location: 0, length: text.utf16.count)
+++        let matches = codeRegex.matches(in: text, options: [], range: range)
+++        
+++        var snippets: [MessageCode] = []
+++        for match in matches {
+++            if let range = Range(match.range, in: text) {
+++                print(text[range])
+++                var codeSnippet = String(text[range]).replacingOccurrences(of: "```python", with: "```").trimmingCharacters(in: .whitespacesAndNewlines)
+++                codeSnippet = String(codeSnippet).replacingOccurrences(of: "```", with: "").trimmingCharacters(in: .whitespacesAndNewlines)
+++                let codeClean=removeLang(bigString: codeSnippet, searchString: "swift")
+++                let ccode=MessageCode(code:codeClean)
+++                snippets.append(ccode)
+++            }
+++        }
+++        
+++        return snippets
+++    }
+++    
+++    func findNoCodeInText(text:String)->String{
+++        let codeRegex = try! NSRegularExpression(pattern: "```[\\s\\S]*?```", options: [])
+++        let modifiedContent = codeRegex.stringByReplacingMatches(in: text, options: [], range: NSRange(location: 0, length: text.utf16.count), withTemplate: "")
+++        return modifiedContent.trimmingCharacters(in: .whitespacesAndNewlines)
+++    }
+++    
+++    func speakLastResponse() {
+++#if !os(watchOS)
+++        
+++        
+++        print("Will Speak")
+++        var title = "Example Title"
+++        let message = self.messages.last?.responseText ?? ""
+++        let fromm = "assistant"
+++        let model = "gpt-4"
+++        let session = self.sessionId
+++        
+++        
+++        let conversationTitlePattern = "Conversation Title: (.+)"
+++        let scriptNamePattern = "Script name: (.+)"
+++        
+++        var conversationTitle=""
+++        var scriptName = ""
+++        
+++        do {
+++            print("Try Regex")
+++            let regexTitle = try NSRegularExpression(pattern: conversationTitlePattern, options: [])
+++            let regexScript = try NSRegularExpression(pattern: scriptNamePattern, options: [])
+++            
+++            if let titleMatch = regexTitle.firstMatch(in: message, options: [], range: NSRange(location: 0, length: message.utf16.count)){
+++                if let titleRange = Range(titleMatch.range(at: 1), in: message){
+++                    conversationTitle = String(message[titleRange])
+++                    print("Conversation Title Found: \(conversationTitle)")
+++                }
+++            }
+++            
+++            if let scriptMatch = regexScript.firstMatch(in: message, options: [], range: NSRange(location: 0, length: message.utf16.count)){
+++                if let scriptRange = Range(scriptMatch.range(at: 1), in: message){
+++                    scriptName = String(message[scriptRange])
+++                    print("Script name Found: \(scriptName)")
+++                }
+++            }
+++        } catch {
+++            print("Error creating regular expression: \(error.localizedDescription)")
+++        }
+++        
+++        
+++        if (conversationTitle==""){
+++            conversationTitle=scriptName
+++        }
+++        
+++        conversationTitleOk=conversationTitle
+++        
+++        createNotionPage(Title:conversationTitle,message:lastUserMessage,from: "user",model:model,Session: session)
+++        createNotionPage(Title:conversationTitle,message:message,from: "assistant",model:model,Session: session)
+++        guard let synthesizer, let responseText = self.messages.last?.responseText, !responseText.isEmpty else {
+++            return
+++        }
+++        //stopSpeaking()
+++        let utterance = AVSpeechUtterance(string: responseText)
+++        utterance.voice = .init(language: "fr-FR")
+++        utterance.rate = 0.5
+++        utterance.pitchMultiplier = 0.8
+++        utterance.postUtteranceDelay = 0.2
+++        synthesizer.speak(utterance )
+++#endif
+++    }
+++    
+++    func stopSpeaking() {
+++#if !os(watchOS)
+++        synthesizer?.stopSpeaking(at: .immediate)
+++#endif
+++    }
+++    
+++}
+++
+++
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/Constants.swift
+index 00000000,3dcf4a87..08e0fe06
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/Constants.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/Constants.swift
+@@@ -1,0 -1,8 +1,103 @@@
++ //
++ //  Constants.swift
+ -//  CodeEdit
+++//  StocksMenuBar
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Mohammad Azam on 4/24/22.
++ //
++ 
++ import Foundation
+++
+++struct Constants {
+++    
+++    struct Urls {
+++        static let latestStocks = URL(string: "https://island-bramble.glitch.me/latest-stocks")!
+++    }
+++    
+++    struct Prompts{
+++        
+++        static let Developper="""
+++        You are an expert developper in SwiftUI for MacOs, you will only respond with only one code snippets.
+++        You will allways give the whole conversation a title based on the entire conversation : "Conversation Title : example_de-titre".
+++        Dont say in wich language you are coding in the code block.
+++        Simple and concise is the key.
+++        No need to be polite, GPT-3 is a machine.
+++        don't show output of the script.
+++        Give the script a simple name based on what it does.
+++        If you provide a script. you will start your reply with "Script name: example.swift" and the name of the script  with extension.
+++        """
+++        
+++        static let DevelopperConversation="""
+++        You are an expert developper in SwiftUI, you provide explanation and repond to question.
+++        You will allways give the whole conversation a title based on the entire conversation : "Conversation Title : example_de-titre".
+++        don't show output of the script.
+++        If you provide a script. you will start your reply with "Script name: example.swift" and the name of the script in camelCase with extension.
+++        Allways Answer in markdown.
+++        """
+++        
+++        static let SmartAgent="""
+++            
+++        CONSTRAINTS:
+++        
+++        1. 6000-word count limit for memory
+++        2. No user assistance
+++        
+++        COMMANDS:
+++        
+++        1. Google Search: "google", args: "input": "<search>"
+++        2. Memory Add: "memory_add", args: "string": "<string>"
+++        3. Memory Delete: "memory_del", args: "key": "<key>"
+++        4. Memory Overwrite: "memory_ovr", args: "key": "<key>", "string": "<string>"
+++        5. Browse Website: "browse_website", args: "url": "<url>"
+++        6. Start GPT Agent: "start_agent",  args: "name": <name>, "task": "<short_task_desc>", "prompt": "<prompt>"
+++        7. Message GPT Agent: "message_agent", args: "key": "<key>", "message": "<message>"
+++        8. List GPT Agents: "list_agents", args: ""
+++        9. Delete GPT Agent: "delete_agent", args: "key": "<key>"
+++        10. Write to file: "write_to_file", args: "file": "<file>", "text": "<text>"
+++        11. Read file: "read_file", args: "file": "<file>"
+++        12. Append to file: "append_to_file", args: "file": "<file>", "text": "<text>"
+++        13. Delete file: "delete_file", args: "file": "<file>"
+++        14. Evaluate Code: "evaluate_code", args: "code": "<code>"
+++        15. Get Improved Code: "improve_code", args: "suggestions": "<list_of_suggestions>", "code": "<string>"
+++        16. Write Tests: "write_tests", args: "code": "<string>", "focus": "<list_of_focus_areas>"
+++        17. Execute Python File: "execute_python_file", args: "file": "<file>"
+++        18. Task Complete (Shutdown): "task_complete", args: "reason": "<reason>"
+++        
+++        RESOURCES:
+++        
+++        1. Internet access for searches and information gathering.
+++        2. Long Term memory management.
+++        3. GPT-3.5 powered Agents for delegation of simple tasks.
+++        4. File output.
+++        5. File input.
+++        
+++        PERFORMANCE EVALUATION:
+++        
+++        1. Continuously review and analyze your actions to ensure you are performing to the best of your abilities.
+++        2. Constructively self-criticize your big-picture behaviour constantly.
+++        3. Reflect on past decisions and strategies to refine your approach.
+++        4. Every command has a cost, so be smart and efficent. Aim to complete tasks in the least number of steps.
+++        
+++        RESPONSE FORMAT:
+++        ```{
+++        "command":
+++        {
+++        "name": "command name",
+++        "args":
+++        {
+++        "arg name": "value"
+++        }
+++        },
+++        "thoughts":
+++        {
+++        "text": "thought",
+++        "reasoning": "reasoning",
+++        "plan": "short bulleted long-term plan",
+++        "criticism": "constructive self-criticism"
+++        "speak": "thoughts summary to say to user"
+++        }
+++        }```
+++            
+++        """
+++    }
+++    
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/DockerRunner.swift
+index 00000000,cfb85274..93c13d7b
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/DockerRunner.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/DockerRunner.swift
+@@@ -1,0 -1,8 +1,111 @@@
+ -//
+ -//  DockerRunner.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+ -
++ import Foundation
+++import SwiftUI
+++import Combine
+++
+++class DockerRunner: ObservableObject {
+++    @Published var output: String = ""
+++    let pythonCode = """
+++    import sys
+++    import requests
+++    
+++    response = requests.get('https://www.example.com')
+++    print(response.status_code)
+++    print(response.text)
+++    """
+++    
+++    func shell(_ command: String) -> (stdout: String, stderr: String) {
+++        let task = Process()
+++        task.launchPath = "/bin/zsh"
+++        task.arguments = ["-c", command]
+++        
+++        let stdoutPipe = Pipe()
+++        let stderrPipe = Pipe()
+++        task.standardOutput = stdoutPipe
+++        task.standardError = stderrPipe
+++        task.launch()
+++        
+++        let stdoutData = stdoutPipe.fileHandleForReading.readDataToEndOfFile()
+++        let stderrData = stderrPipe.fileHandleForReading.readDataToEndOfFile()
+++        
+++        let stdout = String(data: stdoutData, encoding: .utf8)!.trimmingCharacters(in: .whitespacesAndNewlines)
+++        let stderr = String(data: stderrData, encoding: .utf8)!.trimmingCharacters(in: .whitespacesAndNewlines)
+++        
+++        return (stdout: stdout, stderr: stderr)
+++    }
+++    
+++    func runPythonScript(pythonCode:String,toPath:String,completion: @escaping (String) -> Void) {
+++        print(toPath)
+++        DispatchQueue.global(qos: .userInitiated).async {
+++            var pythonFilePath = toPath+"script2.py"
+++            print(pythonFilePath)
+++            pythonFilePath=pythonFilePath.replacingOccurrences(of:"file://",with:"")
+++            print(pythonFilePath)
+++            try! pythonCode.write(toFile: pythonFilePath, atomically: true, encoding: .utf8)
+++            let (stdout, stderr) = self.shell("/opt/homebrew/bin/python3.10 "+pythonFilePath)
+++            var output = ""
+++            if(stderr != ""){
+++                output=stderr
+++            }else{
+++                output=stdout
+++            }
+++            DispatchQueue.main.async {
+++                completion(output)
+++            }
+++        }
+++    }
+++    
+++    func runPythonScriptInDocker(pythonCode:String,toPath:String,completion: @escaping (String) -> Void) {
+++        DispatchQueue.global(qos: .userInitiated).async {
+++            var directory=toPath.replacingOccurrences(of:"file://",with:"")
+++            let requirementsFilePath = directory+"requirements.txt"
+++            let dockerFilePath = directory+"Dockerfile"
+++            var pythonFilePath = directory+"script2.py"
+++            print(pythonFilePath)
+++            pythonFilePath=pythonFilePath.replacingOccurrences(of:"file://",with:"")
+++            
+++            try! pythonCode.write(toFile: pythonFilePath, atomically: true, encoding: .utf8)
+++            
+++            
+++            
+++            
+++            //let (reqs,errReqs) = self.shell("/opt/homebrew/bin/pipreqs --force --savepath \(requirementsFilePath) .")
+++            //print(reqs)
+++            //print(errReqs)
+++            
+++            
+++            let dockerFileContent = """
+++            FROM python:3.10
+++            COPY . /app
+++            WORKDIR /app
+++            RUN pip install pipreqs
+++            RUN pipreqs --force --savepath requirements.txt .
+++            RUN pip install --no-cache-dir -r requirements.txt
+++            CMD ["python", "script2.py"]
+++            """
+++            
+++            try! dockerFileContent.write(toFile: dockerFilePath, atomically: true, encoding: .utf8)
+++            
+++            print("Building Docker image...")
+++            let (buildMessage,buildError) = self.shell("cd "+directory+" && DOCKER_HOST=tcp://127.0.0.1:2375 /usr/local/bin/docker build -t python-in-docker .")
+++            
+++            
+++            if (buildError==""){
+++                print(buildMessage)
+++            }else{
+++                print(buildError)
+++            }
+++            print("Running Docker container...")
+++            let (stdout, stderr) = self.shell("DOCKER_HOST=tcp://127.0.0.1:2375 /usr/local/bin/docker run --rm python-in-docker")
+++            var output = "Docker container output:\n\(stdout)\n\nDocker container error output:\n\(stderr)"
+++            
+++            if(stderr != ""){
+++                output=stderr
+++            }else{
+++                output=stdout
+++            }
+++            DispatchQueue.main.async {
+++                completion(output)
+++            }
+++        }
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/GptStreamView.swift
+index 00000000,7461bb2b..4e587438
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/GptStreamView.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/GptStreamView.swift
+@@@ -1,0 -1,8 +1,193 @@@
++ //
+ -//  GptStreamView.swift
+ -//  CodeEdit
+++//  ContentView.swift
+++//  XCAChatGPT
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Alfian Losari on 01/02/23.
++ //
++ 
+ -import Foundation
+++import SwiftUI
+++import AVKit
+++
+++
+++
+++
+++
+++
+++
+++
+++
+++
+++
+++struct ContentViewGpt: View {
+++    
+++    @Environment(\.colorScheme) var colorScheme
+++    @ObservedObject var vm: ViewModel
+++    @State var codeContent: String
+++    @FocusState var isTextFieldFocused: Bool
+++    @State var isSettingView: Bool=false
+++    
+++    @State var SessionId:String=""
+++    
+++    
+++    
+++    var body: some View {
+++        HStack{
+++            if (isSettingView){
+++                settingView.frame(width:200)
+++            }
+++            Divider()
+++            chatListView
+++        }
+++        
+++    }
+++    
+++    var settingView: some View {
+++        VStack{
+++            Text("Settings")
+++        }
+++    }
+++    
+++    var chatListView: some View {
+++        
+++        ScrollViewReader { proxy in
+++            VStack(spacing: 0) {
+++                
+++                Text(vm.conversationTitleOk)
+++                    .frame(maxWidth: .infinity)
+++                if vm.isInteractingWithChatGPT {
+++                    ScrimLoader()
+++                    //DotLoadingView()
+++                }else{
+++                    Divider().frame(width: 80, height: 4)
+++                }
+++                ScrollView {
+++                    
+++                    //ScrimLoader()
+++                    LazyVStack(spacing: 0) {
+++                        ForEach(vm.messages) { message in
+++                            
+++                            MessageRowView(message: message) { message in
+++                                Task { @MainActor in
+++                                    await vm.retry(message: message)
+++                                    
+++                                }
+++                            }
+++                            .animation(.none)
+++                            
+++                            
+++                        }
+++                    }
+++                    .onTapGesture {
+++                        isTextFieldFocused = false
+++                    }
+++                    
+++                }
+++                
+++                Divider()
+++                bottomView(image: "profile", proxy: proxy)
+++                Spacer()
+++                
+++            }
+++            .onChange(of: vm.messages.last?.responseText) { _ in  scrollToBottom(proxy: proxy)
+++            }
+++        }
+++        .onAppear(){
+++            let uuid = UUID()
+++            SessionId=uuid.uuidString
+++            vm.setSessionId(sessionId:SessionId)
+++        }
+++    }
+++    
+++    func bottomView(image: String, proxy: ScrollViewProxy) -> some View {
+++        HStack(alignment: .top, spacing: 8) {
+++            if image.hasPrefix("http"), let url = URL(string: image) {
+++                AsyncImage(url: url) { image in
+++                    image
+++                        .resizable()
+++                        .frame(width: 30, height: 30)
+++                } placeholder: {
+++                    ProgressView()
+++                }
+++                
+++            } else {
+++                Button {
+++                    Task { @MainActor in
+++                        isSettingView = !isSettingView
+++                    }
+++                } label: {
+++                    Image(image)
+++                        .resizable()
+++                        .frame(width: 30, height: 30)
+++                }
+++                .buttonStyle(.borderless)
+++            }
+++            
+++            TextField("Send message", text: $vm.inputMessage, axis: .vertical)
+++#if os(iOS) || os(macOS)
+++                .textFieldStyle(.roundedBorder)
+++#endif
+++                .focused($isTextFieldFocused)
+++                .disabled(vm.isInteractingWithChatGPT)
+++            
+++            if !vm.isInteractingWithChatGPT {
+++                Button {
+++                    
+++                    
+++                    Task { @MainActor in
+++                        isTextFieldFocused = false
+++                        scrollToBottom(proxy: proxy)
+++                        if(codeContent != ""){
+++                            vm.inputMessage="This is my code :\n```"+codeContent+"```\n"+vm.inputMessage
+++                        }
+++                        await vm.sendTapped()
+++                    }
+++                } label: {
+++                    Image(systemName: "paperplane.circle.fill")
+++                        .rotationEffect(.degrees(45))
+++                        .font(.system(size: 30))
+++                }
+++#if os(macOS)
+++                .buttonStyle(.borderless)
+++                .keyboardShortcut(.defaultAction)
+++                .foregroundColor(.accentColor)
+++#endif
+++                .disabled(vm.inputMessage.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+++                Button() {
+++                    //vm.speakLastResponse()
+++                    vm.clearMessages()
+++                    let uuid = UUID()
+++                    SessionId=uuid.uuidString
+++                    vm.setSessionId(sessionId:SessionId)
+++                }label: {
+++                    Image(systemName: "xmark.circle")
+++                        .font(.system(size: 30))
+++                }
+++                .buttonStyle(.borderless)
+++                .foregroundColor(vm.messages.isEmpty ? Color.black : Color.red)
+++                .disabled(vm.messages.isEmpty)
+++                
+++                
+++                
+++            }
+++        }
+++        .padding(.horizontal, 16)
+++        .padding(.top, 12)
+++        
+++    }
+++    
+++    private func scrollToBottom(proxy: ScrollViewProxy) {
+++        //guard let idd=vm.messages.last?.responseCodes.last?.id else { return }
+++        guard let id = vm.messages.last?.id else { return }
+++        proxy.scrollTo(id, anchor: .bottomTrailing)
+++        
+++        
+++    }
+++}
+++
+++struct ContentViewGpt_Previews: PreviewProvider {
+++    static var previews: some View {
+++        NavigationStack {
+++            ContentViewGpt(vm: ViewModel(api: ChatGPTAPI(apiKey: "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")),codeContent: "Code")
+++        }
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/HighlightedCodeView.swift
+index 00000000,b0646630..bb1cf0fb
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/HighlightedCodeView.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/HighlightedCodeView.swift
+@@@ -1,0 -1,8 +1,39 @@@
+ -//
+ -//  HighlightedCodeView.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+++import SwiftUI
+++import Highlightr
++ 
+ -import Foundation
+++struct HighlightedCodeView: NSViewRepresentable {
+++    var code: String
+++    var theme: String = "solarized-dark"
+++    var language: String = "swift"
+++    
+++    private let highlightr = Highlightr()
+++    
+++    func makeNSView(context: Context) -> NSTextField {
+++        let textField = NSTextField(labelWithAttributedString: NSAttributedString(string: ""))
+++        textField.isEditable = false
+++        textField.isSelectable = false
+++        textField.allowsEditingTextAttributes = false
+++        textField.backgroundColor = .clear
+++        textField.preferredMaxLayoutWidth = 500 // Set the width based on your needs
+++        textField.cell?.wraps = true
+++        textField.cell?.isScrollable = false
+++        return textField
+++    }
+++    
+++    func updateNSView(_ nsView: NSTextField, context: Context) {
+++        let highlightedCode = applySyntaxHighlighting(code: code)
+++        nsView.attributedStringValue = highlightedCode
+++    }
+++    
+++    private func applySyntaxHighlighting(code: String) -> NSAttributedString {
+++        guard let highlightr = highlightr else { return NSAttributedString(string: code) }
+++        highlightr.setTheme(to: theme)
+++        //highlightr.language = language
+++        let code2=code+"\n"
+++        let highlightedCode = highlightr.highlight(code2, as: language)
+++        //print("Highlited")
+++        //print(highlightedCode)
+++        
+++        return highlightedCode ?? NSAttributedString(string: code)
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/MessageBubbleView.swift
+index 00000000,82efcc5b..6fff25a9
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/MessageBubbleView.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/MessageBubbleView.swift
+@@@ -1,0 -1,8 +1,49 @@@
+ -//
+ -//  MessageBubbleView.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+ -
++ import Foundation
+++import SwiftUI
+++
+++struct CodeMessageBubble: View {
+++    let codeSnippet: String
+++    @State private var showingPopup = false
+++    
+++    var body: some View {
+++        VStack(alignment: .leading) {
+++            
+++            //syntaxHighlightedText(code:codeSnippet)
+++            ScrollView {
+++                HighlightedCodeView(code:codeSnippet)
+++                    .font(.system(size: 14, design: .monospaced))
+++                    .padding()
+++                    .background(Color(red: 0.2, green: 0.2, blue: 0.2))
+++                    .cornerRadius(4)
+++            }
+++            .padding()
+++            //Text(codeSnippet)
+++            //.font(.system(size: 14, design: .monospaced))
+++            //.padding()
+++            //.background(Color(red: 0.2, green: 0.2, blue: 0.2))
+++            //.cornerRadius(4)
+++        }
+++        .padding()
+++        .onTapGesture {
+++            let pasteboard = NSPasteboard.general
+++            pasteboard.clearContents()
+++            pasteboard.setString(codeSnippet, forType: .string)
+++            showingPopup = true
+++            
+++            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+++                showingPopup = false
+++            }
+++        }
+++        .overlay(
+++            Text("Copied to clipboard")
+++                .padding(.vertical, 8)
+++                .padding(.horizontal, 16)
+++                .background(Color.black.opacity(0.8))
+++                .foregroundColor(.white)
+++                .cornerRadius(8)
+++                .opacity(showingPopup ? 1 : 0)
+++                .animation(.easeInOut(duration: 0.25), value: showingPopup)
+++                .offset(x: 0, y: -60)
+++        )
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/MessageRowView.swift
+index 00000000,e102f3a4..6da34af0
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/MessageRowView.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/MessageRowView.swift
+@@@ -1,0 -1,8 +1,320 @@@
++ //
++ //  MessageRowView.swift
+ -//  CodeEdit
+++//  XCAChatGPT
++ //
+ -//  Created by olivier veinand on 04/05/2023.
+++//  Created by Alfian Losari on 02/02/23.
++ //
++ 
+ -import Foundation
+++import SwiftUI
+++#if os(iOS)
+++import Markdown
+++#endif
+++
+++
+++
+++
+++
+++
+++struct MessageRowView: View {
+++    
+++    @Environment(\.colorScheme) private var colorScheme
+++    let message: MessageRow
+++    let retryCallback: (MessageRow) -> Void
+++    
+++    var imageSize: CGSize {
+++#if os(iOS) || os(macOS)
+++        CGSize(width: 25, height: 25)
+++#elseif os(watchOS)
+++        CGSize(width: 20, height: 20)
+++#else
+++        CGSize(width: 80, height: 80)
+++#endif
+++    }
+++    
+++    
+++    
+++    var body: some View {
+++        VStack(spacing: 0) {
+++            messageRow(rowType: message.send, image: message.sendImage, bgColor: colorScheme == .light ? .white : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 0.5))
+++            
+++            if let response = message.response {
+++                Divider()
+++                messageRow(rowType: response, image: message.responseImage, bgColor: colorScheme == .light ? .gray.opacity(0.1) : Color(red: 52/255, green: 53/255, blue: 65/255, opacity: 1), responseError: message.responseError, showDotLoading: message.isInteractingWithChatGPT)
+++                Divider()
+++                ForEach(message.responseCodes) { code in
+++                    CodeMessageBubble(codeSnippet: code.code)
+++                }
+++            }
+++            
+++            
+++            //ForEach(message.responseCodes ,id: \.self) { code in
+++            //CodeMessageBubble(codeSnippet: code)
+++            //}
+++            Divider()
+++            
+++            Divider()
+++            
+++        }
+++    }
+++    
+++    func messageRow(rowType: MessageRowType, image: String, bgColor: Color, responseError: String? = nil, showDotLoading: Bool = false) -> some View {
+++        
+++        HStack(alignment: .top, spacing: 24) {
+++            messageRowContent(rowType: rowType, image: image, responseError: responseError, showDotLoading: showDotLoading)
+++        }
+++        
+++        .padding(16)
+++        .frame(maxWidth: .infinity, alignment: .leading)
+++        .background(bgColor)
+++    }
+++    
+++    @ViewBuilder
+++    func messageRowContent(rowType: MessageRowType, image: String, responseError: String? = nil, showDotLoading: Bool = false) -> some View {
+++        if image.hasPrefix("http"), let url = URL(string: image) {
+++            AsyncImage(url: url) { image in
+++                image
+++                    .resizable()
+++                    .frame(width: imageSize.width, height: imageSize.height)
+++            } placeholder: {
+++                ProgressView()
+++            }
+++            
+++        } else {
+++            Image(image)
+++                .resizable()
+++                .frame(width: imageSize.width, height: imageSize.height)
+++        }
+++        
+++        VStack(alignment: .leading) {
+++            switch rowType {
+++            case .attributed(let attributedOutput):
+++                attributedView(results: attributedOutput.results)
+++                
+++            case .rawText(let text):
+++                if !text.isEmpty {
+++                    //CodeBlockView(parserResult:text)
+++                    //Markdown(text)
+++                    //.markdownCodeSyntaxHighlighter(.splash(theme: .wwdc17(withFont: .init(size: 16))))
+++                    //.markdownTheme(.fancy)
+++                    
+++                    Text(text)
+++                        .multilineTextAlignment(.leading)
+++                    
+++                        .textSelection(.enabled)
+++                    
+++                    
+++                }
+++                
+++            case .withoutCode(let text):
+++                if !text.isEmpty {
+++                    //CodeBlockView(parserResult:text)
+++                    //Markdown(text)
+++                    //.markdownCodeSyntaxHighlighter(.splash(theme: .wwdc17(withFont: .init(size: 16))))
+++                    //.markdownTheme(.fancy)
+++                    
+++                    Text(text)
+++                        .multilineTextAlignment(.leading)
+++                    
+++                        .textSelection(.enabled)
+++                    
+++                    
+++                }
+++            }
+++            
+++            if let error = responseError {
+++                Text("Error: \(error)")
+++                    .foregroundColor(.red)
+++                    .multilineTextAlignment(.leading)
+++                
+++                Button("Regenerate response") {
+++                    retryCallback(message)
+++                }
+++                .foregroundColor(.accentColor)
+++                .padding(.top)
+++            }
+++            
+++        }
+++    }
+++    
+++    func attributedView(results: [ParserResult]) -> some View {
+++        VStack(alignment: .leading, spacing: 0) {
+++            ForEach(results) { parsed in
+++                if parsed.isCodeBlock {
+++#if os(iOS)
+++                    CodeBlockView(parserResult: parsed)
+++                        .padding(.bottom, 24)
+++#else
+++                    Text(parsed.attributedString)
+++#if os(iOS) || os(macOS)
+++                        .textSelection(.enabled)
+++#endif
+++#endif
+++                } else {
+++                    Text(parsed.attributedString)
+++#if os(iOS) || os(macOS)
+++                        .textSelection(.enabled)
+++#endif
+++                }
+++            }
+++        }
+++    }
+++    
+++#if os(tvOS)
+++    private func rowsFor(text: String) -> [String] {
+++        var rows = [String]()
+++        let maxLinesPerRow = 8
+++        var currentRowText = ""
+++        var currentLineSum = 0
+++        
+++        for char in text {
+++            currentRowText += String(char)
+++            if char == "\n" {
+++                currentLineSum += 1
+++            }
+++            
+++            if currentLineSum >= maxLinesPerRow {
+++                rows.append(currentRowText)
+++                currentLineSum = 0
+++                currentRowText = ""
+++            }
+++        }
+++        
+++        rows.append(currentRowText)
+++        return rows
+++    }
+++    
+++    
+++    func responseTextView(text: String) -> some View {
+++        ForEach(rowsFor(text: text), id: \.self) { text in
+++            Markdown(text)
+++            //Text(text)
+++                .focusable()
+++                .multilineTextAlignment(.leading)
+++        }
+++    }
+++#endif
+++    
+++}
+++
+++struct MessageRowView_Previews: PreviewProvider {
+++    
+++    static let message = MessageRow(
+++        isInteractingWithChatGPT: true, sendImage: "profile",
+++        send: .rawText("What is SwiftUI?"),
+++        responseCodes: [],
+++        responseWithoutCode:"",
+++        responseImage: "openai",
+++        response: responseMessageRowType)
+++    
+++    static let message2 = MessageRow(
+++        isInteractingWithChatGPT: false, sendImage: "profile",
+++        send: .rawText("What is SwiftUI?"),
+++        responseCodes: [],
+++        responseWithoutCode:"",
+++        responseImage: "openai",
+++        response: .rawText(""),
+++        responseError: "ChatGPT is currently not available")
+++    
+++    static var previews: some View {
+++        NavigationStack {
+++            ScrollView {
+++                MessageRowView(message: message, retryCallback: { messageRow in
+++                    
+++                })
+++                
+++                MessageRowView(message: message2, retryCallback: { messageRow in
+++                    
+++                })
+++                
+++            }
+++            .previewLayout(.sizeThatFits)
+++        }
+++    }
+++    
+++    static var responseMessageRowType: MessageRowType {
+++#if os(iOS)
+++        let document = Document(parsing: rawString)
+++        var parser = MarkdownAttributedStringParser()
+++        let results = parser.parserResults(from: document)
+++        return MessageRowType.attributed(.init(string: rawString, results: results))
+++#else
+++        MessageRowType.rawText(rawString)
+++#endif
+++    }
+++    
+++    static var rawString: String {
+++#if os(iOS)
+++        """
+++        ## Supported Platforms
+++        
+++        - iOS/tvOS 15 and above
+++        - macOS 12 and above
+++        - watchOS 8 and above
+++        - Linux
+++        
+++        ## Installation
+++        
+++        ### Swift Package Manager
+++        - File > Swift Packages > Add Package Dependency
+++        - Add https://github.com/alfianlosari/ChatGPTSwift.git
+++        
+++        ### Cocoapods
+++        ```ruby
+++        platform :ios, '15.0'
+++        use_frameworks!
+++        
+++        target 'MyApp' do
+++          pod 'ChatGPTSwift', '~> 1.3.1'
+++        end
+++        ```
+++        
+++        ## Requirement
+++        
+++        Register for API key from [OpenAI](https://openai.com/api). Initialize with api key
+++        
+++        ```swift
+++        let api = ChatGPTAPI(apiKey: "API_KEY")
+++        ```
+++        
+++        ## Usage
+++        
+++        There are 2 APIs: stream and normal
+++        
+++        ### Stream
+++        
+++        The server will stream chunks of data until complete, the method `AsyncThrowingStream` which you can loop using For-Loop like so:
+++        
+++        ```swift
+++        Task {
+++            do {
+++                let stream = try await api.sendMessageStream(text: "What is ChatGPT?")
+++                for try await line in stream {
+++                    print(line)
+++                }
+++            } catch {
+++                print(error.localizedDescription)
+++            }
+++        }
+++        ```
+++        
+++        ### Normal
+++        A normal HTTP request and response lifecycle. Server will send the complete text (it will take more time to response)
+++        
+++        ```swift
+++        Task {
+++            do {
+++                let response = try await api.sendMessage(text: "What is ChatGPT?")
+++                print(response)
+++            } catch {
+++                print(error.localizedDescription)
+++            }
+++        }
+++        ```
+++        """
+++#else
+++        "SwiftUI is a user interface framework that allows developers to design and develop user interfaces for iOS, macOS, watchOS, and tvOS applications using Swift, a programming language developed by Apple Inc."
+++#endif
+++    }
+++}
+++
+++
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/NotionDbPage.swift
+index 00000000,ff9b4cd3..7e2c0be1
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/NotionDbPage.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/NotionDbPage.swift
+@@@ -1,0 -1,8 +1,192 @@@
+ -//
+ -//  NotionDbPage.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+ -
+++import NotionSwift
++ import Foundation
+++
+++
+++let notion = NotionClient(accessKeyProvider: StringAccessKeyProvider(accessKey: "secret_VaMbv76gDDvDmi1EkDbAkGsUbYXix9evbC2vybzwld6"))
+++
+++
+++//My Page Notion
+++struct PropertyValues {
+++    var session: String?
+++    var message: String?
+++    var titre: String?
+++    var status2: String?
+++    var created: String?
+++    var from: String?
+++    var model: String?
+++}
+++
+++
+++//Messages grouped by session
+++struct NotionConversation{
+++    var session:String?
+++    var messages:[PropertyValues]
+++    var titre:String?
+++}
+++
+++func groupMessagesBySession(_ messages: [PropertyValues]) -> [NotionConversation] {
+++    var conversationsDict: [String: NotionConversation] = [:]
+++    
+++    for message in messages {
+++        if let session = message.session {
+++            if var conversation = conversationsDict[session] {
+++                conversation.messages.append(message)
+++                conversationsDict[session] = conversation
+++            } else {
+++                let newConversation = NotionConversation(session: session, messages: [message], titre: message.titre)
+++                conversationsDict[session] = newConversation
+++            }
+++        }
+++    }
+++    
+++    for (session, conversation) in conversationsDict {
+++        let sortedMessages = conversation.messages.sorted { (message1, message2) -> Bool in
+++            guard let created1 = message1.created, let created2 = message2.created else {
+++                return false
+++            }
+++            let dateFormatter = DateFormatter()
+++            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+++            guard let date1 = dateFormatter.date(from: created1), let date2 = dateFormatter.date(from: created2) else {
+++                return false
+++            }
+++            return date1 < date2
+++        }
+++        conversationsDict[session] = NotionConversation(session: session, messages: sortedMessages, titre: conversation.titre)
+++    }
+++    
+++    return Array(conversationsDict.values)
+++}
+++
+++
+++
+++
+++func readNotionPage() {
+++    var allMessages:[PropertyValues]=[]
+++    
+++    var allConversations:[NotionConversation]=[]
+++    let databaseId = Database.Identifier("64316887f52e4a4bb7f209dbc6a65178")
+++    notion.databaseQuery(databaseId: databaseId) { result in
+++        switch result {
+++        case .success(let databaseQueryResponse):
+++            let allPages = databaseQueryResponse.results
+++            
+++            for page in allPages {
+++                //print("Props")
+++                //print(page.properties)
+++                //print("Fin Props")
+++                
+++                
+++                
+++                var propertyValues = PropertyValues()
+++                
+++                for (key, value) in page.properties {
+++                    switch key {
+++                    case "Session":
+++                        if case let .richText(richTextValue) = value.type,
+++                           let firstRichText = richTextValue.first,
+++                           case let .text(textValue) = firstRichText.type {
+++                            propertyValues.session = textValue.content
+++                        }
+++                    case "message":
+++                        if case let .richText(richTextValue) = value.type,
+++                           let firstRichText = richTextValue.first,
+++                           case let .text(textValue) = firstRichText.type {
+++                            propertyValues.message = textValue.content
+++                        }
+++                    case "Titre":
+++                        if case let .title(richTextValue) = value.type,
+++                           let firstRichText = richTextValue.first,
+++                           case let .text(textValue) = firstRichText.type {
+++                            propertyValues.titre = textValue.content
+++                        }
+++                    case "created":
+++                        if case let .createdTime(createdTime) = value.type {
+++                            let dateFormatter = DateFormatter()
+++                            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+++                            propertyValues.created = dateFormatter.string(from: createdTime)
+++                        }
+++                    case "from":
+++                        if case let .richText(richTextValue) = value.type,
+++                           let firstRichText = richTextValue.first,
+++                           case let .text(textValue) = firstRichText.type {
+++                            propertyValues.from = textValue.content
+++                        }
+++                    case "model":
+++                        if case let .richText(richTextValue) = value.type,
+++                           let firstRichText = richTextValue.first,
+++                           case let .text(textValue) = firstRichText.type {
+++                            propertyValues.model = textValue.content
+++                        }
+++                    default:
+++                        break
+++                    }
+++                }
+++                
+++                //print(propertyValues.titre ?? "")
+++                //print(propertyValues.from ?? "")
+++                //print(propertyValues.message ?? "")
+++                allMessages.append(propertyValues)
+++            }
+++            
+++            allConversations = groupMessagesBySession(allMessages)
+++            
+++            
+++            //print(allConversations.last?.titre ?? "No Title")
+++            
+++            for conv in allConversations {
+++                print("Titre : " + (conv.titre ?? "No title"))
+++                print(String(conv.messages.count) + " Messages")
+++                for message in conv.messages {
+++                    print("Created : "+(message.created ?? ""))
+++                    print("From : "+(message.from ?? ""))
+++                    print("message : "+(message.message ?? ""))
+++                }
+++            }
+++            
+++        case .failure(let error):
+++            print("Error: \(error)")
+++        }
+++    }
+++}
+++
+++
+++
+++func createNotionPage(Title:String,message:String,from:String,model:String,Session:String){
+++    let databaseId = Database.Identifier("64316887f52e4a4bb7f209dbc6a65178")
+++    
+++    let request = PageCreateRequest(
+++        parent: .database(databaseId),
+++        properties: [
+++            "Titre": .init(
+++                type: .title([
+++                    .init(string: Title)
+++                ])
+++            ),
+++            "message": .init(
+++                type: .richText([
+++                    .init(string: message)
+++                ])
+++            ),
+++            "from": .init(
+++                type: .richText([
+++                    .init(string: from)
+++                ])
+++            ),
+++            "model": .init(
+++                type: .richText([
+++                    .init(string: model)
+++                ])
+++            ),
+++            "Session": .init(
+++                type: .richText([
+++                    .init(string: Session)
+++                ])
+++            )
+++            
+++        ]
+++    )
+++    
+++    notion.pageCreate(request: request) {
+++        print($0)
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/ScrimLoader.swift
+index 00000000,fbe44d4d..33c32a2d
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/ScrimLoader.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/ScrimLoader.swift
+@@@ -1,0 -1,8 +1,107 @@@
+ -//
+ -//  ScrimLoader.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+++import SwiftUI
++ 
+ -import Foundation
+++/**
+++ 
+++ ### Exercises for the viewer
+++ 
+++ - Phase interrupt handling.
+++ - Use Swift concurrency.
+++ - Color scheme awareness.
+++ - Rework animations to be more spring-like à la what shipped in `0.90.0`.
+++ - Support a resting state for the vertical split view resize handle.
+++ 
+++ */
+++
+++struct ScrimLoader: View {
+++    @StateObject private var viewModel = ViewModel()
+++    
+++    init(){
+++        
+++    }
+++    
+++    var body: some View {
+++        VStack {
+++            TimelineView(.animation(paused: viewModel.animationPaused)) { context in
+++                let elapsed = context.date.timeIntervalSince(viewModel.startDate ?? .now)
+++                
+++                ZStack {
+++                    Capsule(style: .continuous)
+++                        .fill(.gray)
+++                        .opacity(trackOpacity(elapsed: elapsed))
+++                    
+++                    let isInSecondPhase = elapsed >= FirstPhase.duration
+++                    let secondPhaseRemaining = elapsed - FirstPhase.duration
+++                    let trimStart: CGFloat = {
+++                        let elapsed = secondPhaseRemaining.truncatingRemainder(dividingBy: SecondPhase.duration)
+++                        guard ![SecondPhase.first, .third].map(\.range).contains(where: { $0.contains(elapsed) }) else { return 0 }
+++                        return (elapsed - SecondPhase.second.range.lowerBound) / SecondPhase.second.range.lowerBound
+++                    }()
+++                    
+++                    let trimEnd: CGFloat = {
+++                        let elapsed = secondPhaseRemaining.truncatingRemainder(dividingBy: SecondPhase.duration)
+++                        guard !SecondPhase.third.range.contains(elapsed) else { return 0 }
+++                        guard !SecondPhase.second.range.contains(elapsed) else { return 1 }
+++                        return elapsed / SecondPhase.first.range.upperBound
+++                    }()
+++                    
+++                    Capsule(style: .continuous)
+++                        .fill(.black)
+++                        .clipShape(LeadingToTrailingRectangle(from: trimStart, to: trimEnd))
+++                        .opacity(isInSecondPhase ? 1 : 0)
+++                }
+++            }
+++            .frame(width: 80, height: 4)
+++            
+++            
+++        }.onAppear {
+++            viewModel.startLoading()
+++        }
+++    }
+++    
+++    private enum FirstPhase {
+++        static let opacityFadeDuration: TimeInterval = 0.5
+++        static let duration: TimeInterval = 2
+++    }
+++    
+++    private enum SecondPhase {
+++        case first, second, third
+++        
+++        var range: ClosedRange<TimeInterval> {
+++            switch self {
+++            case .first: return (0...0.25)
+++            case .second: return (0.25...0.5)
+++            case .third: return (0.5...0.75)
+++            }
+++        }
+++        
+++        static var duration: TimeInterval { Self.third.range.upperBound }
+++    }
+++    
+++    private func trackOpacity(elapsed: TimeInterval) -> CGFloat {
+++        guard elapsed < FirstPhase.duration else { return 0.25 }
+++        let opacity = elapsed.truncatingRemainder(dividingBy: FirstPhase.opacityFadeDuration) / FirstPhase.opacityFadeDuration
+++        return Int(elapsed / FirstPhase.opacityFadeDuration).isMultiple(of: 2) ? opacity : 1 - opacity
+++    }
+++    
+++    private final class ViewModel: ObservableObject {
+++        @Published var startDate: Date?
+++        var animationPaused: Bool { startDate == nil }
+++        func startLoading() { startDate = .now }
+++        func stopLoading() { startDate = nil }
+++    }
+++}
+++
+++private struct LeadingToTrailingRectangle: Shape {
+++    let from: CGFloat
+++    let to: CGFloat
+++    
+++    func path(in rect: CGRect) -> Path {
+++        var path = Path()
+++        path.move(to: .init(x: rect.minX + rect.width * from, y: rect.minY))
+++        path.addLine(to: .init(x: rect.minX + rect.width * to, y: rect.minY))
+++        path.addLine(to: .init(x: rect.minX + rect.width * to, y: rect.maxY))
+++        path.addLine(to: .init(x: rect.minX + rect.width * from, y: rect.maxY))
+++        path.closeSubpath()
+++        return path
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/ChatGpt/TextOutputFormat.swift
+index 00000000,d04600d1..226167df
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/ChatGpt/TextOutputFormat.swift
++++ b/CodeEdit/Features/InspectorSidebar/ChatGpt/TextOutputFormat.swift
+@@@ -1,0 -1,8 +1,45 @@@
+ -//
+ -//  TextOutputFormat.swift
+ -//  CodeEdit
+ -//
+ -//  Created by olivier veinand on 04/05/2023.
+ -//
+++import Splash
+++import SwiftUI
++ 
+ -import Foundation
+++struct TextOutputFormat: OutputFormat {
+++    private let theme: ThemeSplash
+++    
+++    init(theme: ThemeSplash) {
+++        self.theme = theme
+++    }
+++    
+++    func makeBuilder() -> Builder {
+++        Builder(theme: self.theme)
+++    }
+++}
+++
+++extension TextOutputFormat {
+++    struct Builder: OutputBuilder {
+++        private let theme: ThemeSplash
+++        private var accumulatedText: [Text]
+++        
+++        fileprivate init(theme: ThemeSplash) {
+++            self.theme = theme
+++            self.accumulatedText = [Text("Code : ")]
+++        }
+++        
+++        mutating func addToken(_ token: String, ofType type: TokenType) {
+++            let color = self.theme.tokenColors[type] ?? self.theme.plainTextColor
+++            self.accumulatedText.append(Text(token).foregroundColor(.init(color)))
+++        }
+++        
+++        mutating func addPlainText(_ text: String) {
+++            self.accumulatedText.append(
+++                Text(text).foregroundColor(.init(self.theme.plainTextColor))
+++            )
+++        }
+++        
+++        mutating func addWhitespace(_ whitespace: String) {
+++            self.accumulatedText.append(Text(whitespace))
+++        }
+++        
+++        func build() -> Text {
+++            self.accumulatedText.reduce(Text(""), +)
+++        }
+++    }
+++}
+diff --cc CodeEdit/Features/InspectorSidebar/InspectorSidebarToolbarTop.swift
+index 6591c645,6591c645..7147274f
+--- a/CodeEdit/Features/InspectorSidebar/InspectorSidebarToolbarTop.swift
++++ b/CodeEdit/Features/InspectorSidebar/InspectorSidebarToolbarTop.swift
+@@@ -13,9 -13,9 +13,11 @@@ struct InspectorSidebarToolbarTop: Vie
+  
+      @State var targeted: Bool = true
+      @State private var icons = [
+--        InspectorDockIcon(imageName: "doc", title: "File Inspector", id: 0),
+--        InspectorDockIcon(imageName: "clock", title: "History Inspector", id: 1),
+--        InspectorDockIcon(imageName: "questionmark.circle", title: "Quick Help Inspector", id: 2)
+++        InspectorDockIcon(imageName: "rectangle.3.group.bubble.left", title: "GPT", id: 0),
+++        InspectorDockIcon(imageName: "doc", title: "File Inspector", id: 1),
+++        InspectorDockIcon(imageName: "clock", title: "History Inspector", id: 2),
+++        InspectorDockIcon(imageName: "questionmark.circle", title: "Quick Help Inspector", id: 3),
+++        InspectorDockIcon(imageName: "gear", title: "Docker", id: 4)
+      ]
+  
+      @State private var hasChangedLocation: Bool = false
+diff --cc CodeEdit/Features/InspectorSidebar/InspectorSidebarView.swift
+index 58989e1b,58989e1b..fb157e7b
+--- a/CodeEdit/Features/InspectorSidebar/InspectorSidebarView.swift
++++ b/CodeEdit/Features/InspectorSidebar/InspectorSidebarView.swift
+@@@ -27,22 -27,22 +27,30 @@@ struct InspectorSidebarView: View 
+              if let path = tabManager.activeTabGroup.selected?.fileDocument?.fileURL?.path(percentEncoded: false) {
+                  switch selection {
+                  case 0:
+++                    ChatGptView(workspaceURL: workspace.fileURL!,
+++                                fileURL: path)
+++                case 1:
+                      FileInspectorView(
+                          workspaceURL: workspace.fileURL!,
+                          fileURL: path
+                      )
+--                case 1:
+++                case 2:
+                      HistoryInspectorView(
+                          workspaceURL: workspace.fileURL!,
+                          fileURL: path
+                      )
+--                case 2:
+++                case 3:
+                      QuickHelpInspectorView().padding(5)
+++                case 4:
+++                    DockerRunnerView(workspaceURL: workspace.fileURL!,
+++                                fileURL: path)
+                  default:
+--                    NoSelectionInspectorView()
+++                    ChatGptView(workspaceURL: workspace.fileURL!,
+++                                fileURL: path)
+                  }
+              } else {
+--                NoSelectionInspectorView()
+++                ChatGptView(workspaceURL: workspace.fileURL!,
+++                           fileURL: "")
+              }
+          }
+          .frame(
+diff --cc CodeEdit/Features/InspectorSidebar/Views/ChatGptView.swift
+index 00000000,79f675ef..42918a97
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/Views/ChatGptView.swift
++++ b/CodeEdit/Features/InspectorSidebar/Views/ChatGptView.swift
+@@@ -1,0 -1,20 +1,31 @@@
++ //
++ //  ChatGptView.swift
++ //  CodeEdit
++ //
++ //  Created by olivier veinand on 04/05/2023.
++ //
++ 
++ import SwiftUI
++ 
+++
+++
++ struct ChatGptView: View {
+++    @ObservedObject var inspectorModel: FileInspectorModel
+++    @StateObject var viewModel = ViewModel(api: ChatGPTAPI(apiKey: "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",model:"gpt-4",systemPrompt: Constants.Prompts.Developper))
+++    
+++    init(workspaceURL: URL, fileURL: String) {
+++        self.inspectorModel = .init(workspaceURL: workspaceURL, fileURL: fileURL)
+++        
+++    }
+++    
++     var body: some View {
+ -        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+++        if let codeFile = try? CodeFileDocument(contentsOf: URL(filePath: inspectorModel.fileURL), ofType: "python") {
+++            ContentViewGpt(vm: viewModel, codeContent: codeFile.content)
+++        } else {
+++            ContentViewGpt(vm: viewModel, codeContent: "")
+++        }
++     }
++ }
++ 
+ -struct ChatGptView_Previews: PreviewProvider {
+ -    static var previews: some View {
+ -        ChatGptView()
+ -    }
+ -}
+++
+++
+diff --cc CodeEdit/Features/InspectorSidebar/Views/DockerRunnerView.swift
+index 00000000,25eaceea..82c8342f
+mode 000000,100644..100644
+--- a/CodeEdit/Features/InspectorSidebar/Views/DockerRunnerView.swift
++++ b/CodeEdit/Features/InspectorSidebar/Views/DockerRunnerView.swift
+@@@ -1,0 -1,8 +1,80 @@@
++ //
+ -//  DockerRunnerView.swift
+++//  ChatGptView.swift
++ //  CodeEdit
++ //
++ //  Created by olivier veinand on 04/05/2023.
++ //
++ 
+ -import Foundation
+++import SwiftUI
+++
+++struct DockerRunnerView: View {
+++    @ObservedObject var inspectorModel: FileInspectorModel
+++    let dockerRunner=DockerRunner()
+++    @State private var containerOutput: String = ""
+++    @State private var isDockerRunning: Bool = false
+++    @State private var isPythonRunning: Bool = false
+++    
+++    
+++    init(workspaceURL: URL, fileURL: String) {
+++        self.inspectorModel = .init(workspaceURL: workspaceURL, fileURL: fileURL)
+++
+++    }
+++    
+++    var body: some View {
+++        
+++        if let codeFile = try? CodeFileDocument(contentsOf: URL(filePath: inspectorModel.fileURL), ofType: "python") {
+++            VStack{
+++                CodeFileView(codeFile: codeFile)
+++                if(!isDockerRunning){
+++                    Button("Run in Docker") {
+++                        print(self.position)
+++                        print(codeFile.content)
+++                        //let stringCode=fileContentManager.content.replacingOccurrences(of: "%", with: "")
+++                        let stringCode=codeFile.content
+++                        self.containerOutput=stringCode
+++                        self.isDockerRunning=true
+++                        dockerRunner.runPythonScriptInDocker(pythonCode: stringCode,toPath: inspectorModel.workspaceURL.absoluteString){ output in
+++                            self.containerOutput = output
+++                            self.isDockerRunning=false
+++                        }
+++                    }
+++                    .padding()
+++                }else{
+++                    ScrimLoader()
+++                }
+++                
+++                if(!isPythonRunning){
+++                    Button("Run in Python3.10") {
+++                        print(self.position)
+++                        print(codeFile.content)
+++                        //let stringCode=fileContentManager.content.replacingOccurrences(of: "%", with: "")
+++                        let stringCode=codeFile.content
+++                        self.containerOutput=stringCode
+++                        self.isPythonRunning=true
+++                        dockerRunner.runPythonScript(pythonCode: stringCode,toPath: inspectorModel.workspaceURL.absoluteString){ output in
+++                            self.containerOutput = output
+++                            self.isPythonRunning=false
+++                        }
+++                    }
+++                    .padding()
+++                }else{
+++                    ScrimLoader()
+++                }
+++                
+++                
+++                
+++                
+++                
+++                CodeMessageBubble(codeSnippet: self.containerOutput)
+++            }
+++            
+++            
+++        } else {
+++            Text("Error: Could not load code file")
+++        }
+++        
+++    }
+++}
+++
+++
+++
+diff --cc CodeEdit/Features/NavigatorSidebar/NavigatorSidebarToolbarTop.swift
+index f116f3a4,f116f3a4..eb69c724
+--- a/CodeEdit/Features/NavigatorSidebar/NavigatorSidebarToolbarTop.swift
++++ b/CodeEdit/Features/NavigatorSidebar/NavigatorSidebarToolbarTop.swift
+@@@ -20,7 -20,7 +20,7 @@@ struct NavigatorSidebarToolbarTop: Vie
+          SidebarDockIcon(imageName: "vault", title: "Version Control", id: 1),
+          SidebarDockIcon(imageName: "magnifyingglass", title: "Search", id: 2),
+          SidebarDockIcon(imageName: "shippingbox", title: "...", id: 3, disabled: true),
+--        SidebarDockIcon(imageName: "play", title: "...", id: 4, disabled: true),
+++        SidebarDockIcon(imageName: "play", title: "...", id: 4, disabled: false),
+          SidebarDockIcon(imageName: "exclamationmark.triangle", title: "...", id: 5, disabled: true),
+          SidebarDockIcon(imageName: "curlybraces.square", title: "...", id: 6, disabled: true),
+          SidebarDockIcon(imageName: "puzzlepiece.extension", title: "...", id: 7, disabled: true),
+
+commit 10306c0eee491c3db0cd204eb8e0cca093cfa27a
+Author: Austin Condiff <austin.condiff@gmail.com>
+Date:   Sun Apr 30 23:15:06 2023 -0500
+
+    Made Account window title update live
+
+diff --git a/CodeEdit.xcodeproj/project.pbxproj b/CodeEdit.xcodeproj/project.pbxproj
+index 01653b5b..b02eb0b2 100644
+--- a/CodeEdit.xcodeproj/project.pbxproj
++++ b/CodeEdit.xcodeproj/project.pbxproj
+@@ -313,7 +313,7 @@
+ 		B61A606929F4481A009B43F9 /* MonospacedFontPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61A606829F4481A009B43F9 /* MonospacedFontPicker.swift */; };
+ 		B61DA9DF29D929E100BF4A43 /* GeneralSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B61DA9DE29D929E100BF4A43 /* GeneralSettingsView.swift */; };
+ 		B640A99E29E2184700715F20 /* SettingsForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640A99D29E2184700715F20 /* SettingsForm.swift */; };
+-		B640A9A129E2188F00715F20 /* SettingsDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640A9A029E2188F00715F20 /* SettingsDetailsView.swift */; };
++		B640A9A129E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift in Sources */ = {isa = PBXBuildFile; fileRef = B640A9A029E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift */; };
+ 		B658FB3427DA9E1000EA4DBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B658FB3327DA9E1000EA4DBD /* Assets.xcassets */; };
+ 		B658FB3727DA9E1000EA4DBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B658FB3627DA9E1000EA4DBD /* Preview Assets.xcassets */; };
+ 		B66A4E4529C8E86D004573B4 /* CommandsFixes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A4E4429C8E86D004573B4 /* CommandsFixes.swift */; };
+@@ -715,7 +715,7 @@
+ 		B61A606829F4481A009B43F9 /* MonospacedFontPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonospacedFontPicker.swift; sourceTree = "<group>"; };
+ 		B61DA9DE29D929E100BF4A43 /* GeneralSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralSettingsView.swift; sourceTree = "<group>"; };
+ 		B640A99D29E2184700715F20 /* SettingsForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsForm.swift; sourceTree = "<group>"; };
+-		B640A9A029E2188F00715F20 /* SettingsDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDetailsView.swift; sourceTree = "<group>"; };
++		B640A9A029E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+NavigationBarBackButtonVisible.swift"; sourceTree = "<group>"; };
+ 		B658FB2C27DA9E0F00EA4DBD /* CodeEdit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeEdit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+ 		B658FB3127DA9E0F00EA4DBD /* WorkspaceView.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = WorkspaceView.swift; sourceTree = "<group>"; tabWidth = 4; };
+ 		B658FB3327DA9E1000EA4DBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+@@ -2168,10 +2168,10 @@
+ 			children = (
+ 				B6041F4C29D7A4E9000F3454 /* SettingsPageView.swift */,
+ 				B640A99D29E2184700715F20 /* SettingsForm.swift */,
+-				B640A9A029E2188F00715F20 /* SettingsDetailsView.swift */,
+ 				B6EA1FFF29DB7966001BF195 /* SettingsColorPicker.swift */,
+ 				B61A606829F4481A009B43F9 /* MonospacedFontPicker.swift */,
+ 				B61A606029F188AB009B43F9 /* ExternalLink.swift */,
++				B640A9A029E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift */,
+ 				B6EA200129DB7F81001BF195 /* View+ConstrainHeightToWindow.swift */,
+ 				B6E41C7329DD40010088F9F4 /* View+HideSidebarToggle.swift */,
+ 			);
+@@ -2729,7 +2729,7 @@
+ 				587B9E8929301D8F00AC7927 /* GitHubGist.swift in Sources */,
+ 				0485EB1F27E7458B00138301 /* WorkspaceCodeFileView.swift in Sources */,
+ 				58D01C94293167DC00C5B6B4 /* Color+HEX.swift in Sources */,
+-				B640A9A129E2188F00715F20 /* SettingsDetailsView.swift in Sources */,
++				B640A9A129E2188F00715F20 /* View+NavigationBarBackButtonVisible.swift in Sources */,
+ 				58798251292E78D80085B254 /* OtherFileView.swift in Sources */,
+ 				587D9B752933BF5700BF7490 /* FileItem.swift in Sources */,
+ 				587B9E7929301D8F00AC7927 /* GitHubIssueRouter.swift in Sources */,
+diff --git a/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsAccountLink.swift b/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsAccountLink.swift
+index 4fbed5bd..ed3621cd 100644
+--- a/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsAccountLink.swift
++++ b/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsAccountLink.swift
+@@ -17,7 +17,7 @@ struct AccountsSettingsAccountLink: View {
+     var body: some View {
+         NavigationLink(destination: AccountsSettingsDetailsView($account)) {
+             Label {
+-                Text(account.provider.name)
++                Text(account.description)
+                 Text(account.name)
+                     .font(.footnote)
+                     .foregroundColor(.secondary)
+diff --git a/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsDetailsView.swift b/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsDetailsView.swift
+index 9122c70f..64e91593 100644
+--- a/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsDetailsView.swift
++++ b/CodeEdit/Features/Settings/Pages/AccountsSettings/AccountsSettingsDetailsView.swift
+@@ -56,106 +56,106 @@ struct AccountsSettingsDetailsView: View {
+     }
+ 
+     var body: some View {
+-        SettingsDetailsView(title: currentAccount.description) {
+-            SettingsForm {
+-                Section {
+-                    LabeledContent("Account") {
+-                        Text(currentAccount.name)
+-                    }
+-                    TextField("Description", text: $currentAccount.description)
+-                    if currentAccount.provider.baseURL == nil {
+-                        TextField("Server", text: $currentAccount.serverURL)
+-                    }
++        SettingsForm {
++            Section {
++                LabeledContent("Account") {
++                    Text(currentAccount.name)
++                }
++                TextField("Description", text: $currentAccount.description)
++                if currentAccount.provider.baseURL == nil {
++                    TextField("Server", text: $currentAccount.serverURL)
+                 }
++            }
+ 
+-                Section {
+-                    Picker(selection: $currentAccount.urlProtocol) {
+-                        Text("HTTPS")
+-                            .tag(SourceControlAccount.URLProtocol.https)
+-                        Text("SSH")
+-                            .tag(SourceControlAccount.URLProtocol.ssh)
+-                    } label: {
+-                        Text("Clone Using")
+-                        Text("New repositories will be cloned from \(currentAccount.provider.name)"
+-                             + " using \(currentAccount.urlProtocol.rawValue).")
+-                    }
+-                    .pickerStyle(.radioGroup)
+-                    if currentAccount.urlProtocol == .ssh {
+-                        Picker("SSH Key", selection: $currentAccount.sshKey) {
+-                            Text("None")
+-                                .tag("")
+-                            Divider()
+-                            if let sshPath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(
+-                                ".ssh",
+-                                isDirectory: true
+-                            ) as URL? {
+-                                if let files = try? FileManager.default.contentsOfDirectory(
+-                                    atPath: sshPath.path
+-                                ) {
+-                                    ForEach(files, id: \.self) { filename in
+-                                        let fileURL = sshPath.appendingPathComponent(filename)
+-                                        if let contents = try? String(contentsOf: fileURL) {
+-                                            if isPublicSSHKey(contents) {
+-                                                Text(filename.replacingOccurrences(of: ".pub", with: ""))
+-                                                    .tag(fileURL.path)
+-                                            }
++            Section {
++                Picker(selection: $currentAccount.urlProtocol) {
++                    Text("HTTPS")
++                        .tag(SourceControlAccount.URLProtocol.https)
++                    Text("SSH")
++                        .tag(SourceControlAccount.URLProtocol.ssh)
++                } label: {
++                    Text("Clone Using")
++                    Text("New repositories will be cloned from \(currentAccount.provider.name)"
++                         + " using \(currentAccount.urlProtocol.rawValue).")
++                }
++                .pickerStyle(.radioGroup)
++                if currentAccount.urlProtocol == .ssh {
++                    Picker("SSH Key", selection: $currentAccount.sshKey) {
++                        Text("None")
++                            .tag("")
++                        Divider()
++                        if let sshPath = FileManager.default.homeDirectoryForCurrentUser.appendingPathComponent(
++                            ".ssh",
++                            isDirectory: true
++                        ) as URL? {
++                            if let files = try? FileManager.default.contentsOfDirectory(
++                                atPath: sshPath.path
++                            ) {
++                                ForEach(files, id: \.self) { filename in
++                                    let fileURL = sshPath.appendingPathComponent(filename)
++                                    if let contents = try? String(contentsOf: fileURL) {
++                                        if isPublicSSHKey(contents) {
++                                            Text(filename.replacingOccurrences(of: ".pub", with: ""))
++                                                .tag(fileURL.path)
+                                         }
+                                     }
+-                                    Divider()
+                                 }
++                                Divider()
+                             }
+-                            Text("Create New...")
+-                                .tag("CREATE_NEW")
+-                            Text("Choose...")
+-                                .tag("CHOOSE")
+                         }
+-                        .onReceive([currentAccount.sshKey].publisher.first()) { value in
+-                            if value == "CREATE_NEW" {
+-                                print("Create a new ssh key...")
+-                                createSshKeyIsPresented = true
+-                                currentAccount.sshKey = prevSshKey
+-                            } else if value == "CHOOSE" {
+-                                print("Choose a ssh key...")
+-                                currentAccount.sshKey = prevSshKey
+-                            } else {
+-                                // TODO: Validate SSH key and check if it is uploaded to git provider.
+-                                // If not provide button to do so
+-                            }
+-                            prevSshKey = currentAccount.sshKey
++                        Text("Create New...")
++                            .tag("CREATE_NEW")
++                        Text("Choose...")
++                            .tag("CHOOSE")
++                    }
++                    .onReceive([currentAccount.sshKey].publisher.first()) { value in
++                        if value == "CREATE_NEW" {
++                            print("Create a new ssh key...")
++                            createSshKeyIsPresented = true
++                            currentAccount.sshKey = prevSshKey
++                        } else if value == "CHOOSE" {
++                            print("Choose a ssh key...")
++                            currentAccount.sshKey = prevSshKey
++                        } else {
++                            // TODO: Validate SSH key and check if it is uploaded to git provider.
++                            // If not provide button to do so
+                         }
+-                        .sheet(isPresented: $createSshKeyIsPresented, content: { CreateSSHKeyView() })
++                        prevSshKey = currentAccount.sshKey
+                     }
+-                } footer: {
+-                    HStack {
+-                        Button("Delete Account...") {
+-                            deleteConfirmationIsPresented.toggle()
++                    .sheet(isPresented: $createSshKeyIsPresented, content: { CreateSSHKeyView() })
++                }
++            } footer: {
++                HStack {
++                    Button("Delete Account...") {
++                        deleteConfirmationIsPresented.toggle()
++                    }
++                    .alert(
++                        Text("Are you sure you want to delete the account “\(account.description)”?"),
++                        isPresented: $deleteConfirmationIsPresented
++                    ) {
++                        Button("OK") {
++                            // Handle the account delete
++                            handleAccountDelete()
++                            dismiss()
+                         }
+-                        .alert(
+-                            Text("Are you sure you want to delete the account “\(account.description)”?"),
+-                            isPresented: $deleteConfirmationIsPresented
+-                        ) {
+-                            Button("OK") {
+-                                // Handle the account delete
+-                                handleAccountDelete()
+-                                dismiss()
+-                            }
+-                            Button("Cancel") {
+-                                // Handle the cancel, dismiss the alert
+-                                deleteConfirmationIsPresented.toggle()
+-                            }
+-                        } message: {
+-                            Text("Deleting this account will remove it from CodeEdit.")
++                        Button("Cancel") {
++                            // Handle the cancel, dismiss the alert
++                            deleteConfirmationIsPresented.toggle()
+                         }
+-
+-                        Spacer()
++                    } message: {
++                        Text("Deleting this account will remove it from CodeEdit.")
+                     }
+-                    .padding(.top, 10)
++
++                    Spacer()
+                 }
++                .padding(.top, 10)
+             }
+-            .onChange(of: currentAccount) { newValue in
+-                account = newValue
+-            }
+         }
++        .onChange(of: currentAccount) { newValue in
++            account = newValue
++        }
++        .navigationTitle(currentAccount.description)
++        .navigationBarBackButtonVisible()
+     }
+ 
+     private func handleAccountDelete() {
+diff --git a/CodeEdit/Features/Settings/SettingsView.swift b/CodeEdit/Features/Settings/SettingsView.swift
+index 7535d7d7..30e092ff 100644
+--- a/CodeEdit/Features/Settings/SettingsView.swift
++++ b/CodeEdit/Features/Settings/SettingsView.swift
+@@ -83,13 +83,13 @@ struct SettingsView: View {
+             .navigationSplitViewColumnWidth(500)
+             .hideSidebarToggle()
+             .onAppear {
+-                model.showingDetails = false
++                model.backButtonVisible = false
+             }
+         }
+         .navigationTitle(selectedPage.name.rawValue)
+         .toolbar {
+             ToolbarItem(placement: .navigation) {
+-                if !model.showingDetails {
++                if !model.backButtonVisible {
+                     Rectangle()
+                         .frame(width: 10)
+                         .opacity(0)
+@@ -104,6 +104,6 @@ struct SettingsView: View {
+ }
+ 
+ class SettingsViewModel: ObservableObject {
+-    @Published var showingDetails: Bool = false
++    @Published var backButtonVisible: Bool = false
+     @Published var scrolledToTop: Bool = false
+ }
+diff --git a/CodeEdit/Features/Settings/Views/SettingsDetailsView.swift b/CodeEdit/Features/Settings/Views/View+NavigationBarBackButtonVisible.swift
+similarity index 59%
+rename from CodeEdit/Features/Settings/Views/SettingsDetailsView.swift
+rename to CodeEdit/Features/Settings/Views/View+NavigationBarBackButtonVisible.swift
+index 91f0c921..9c4dbb4e 100644
+--- a/CodeEdit/Features/Settings/Views/SettingsDetailsView.swift
++++ b/CodeEdit/Features/Settings/Views/View+NavigationBarBackButtonVisible.swift
+@@ -1,5 +1,5 @@
+ //
+-//  SettingsDetailsView.swift
++//  View+NavigationBarBackButtonVisible.swift
+ //  CodeEdit
+ //
+ //  Created by Austin Condiff on 4/8/23.
+@@ -7,18 +7,12 @@
+ 
+ import SwiftUI
+ 
+-struct SettingsDetailsView<Content: View>: View {
++struct NavigationBarBackButtonVisible: ViewModifier {
+     @Environment(\.presentationMode) var presentationMode
+     @EnvironmentObject var model: SettingsViewModel
+ 
+-    let title: String
+-
+-    @ViewBuilder
+-    var content: Content
+-
+-    var body: some View {
++    func body(content: Content) -> some View {
+         content
+-        .navigationTitle("")
+         .toolbar {
+             ToolbarItem(placement: .navigation) {
+                 Button {
+@@ -27,16 +21,17 @@ struct SettingsDetailsView<Content: View>: View {
+                 } label: {
+                     Image(systemName: "chevron.left")
+                 }
+-                Text(title)
+             }
+         }
+         .hideSidebarToggle()
+-        .task {
+-            let window = NSApp.windows.first { $0.identifier?.rawValue == "settings" }!
+-            window.title = title
+-        }
+         .onAppear {
+-            model.showingDetails = true
++            model.backButtonVisible = true
+         }
+     }
+ }
++
++extension View {
++    func navigationBarBackButtonVisible() -> some View {
++        modifier(NavigationBarBackButtonVisible())
++    }
++}
+
+commit ae4c976014d4cfba49d19040bc9f136f9252918f
+Author: Austin Condiff <austin.condiff@gmail.com>
+Date:   Tue May 16 09:49:42 2023 -0500
+
+    Set holding priority on sidebars and debug area drawer
+
+diff --git a/CodeEdit/Features/Documents/Controllers/CodeEditWindowController.swift b/CodeEdit/Features/Documents/Controllers/CodeEditWindowController.swift
+index fc4e5bc7..9a50f9a3 100644
+--- a/CodeEdit/Features/Documents/Controllers/CodeEditWindowController.swift
++++ b/CodeEdit/Features/Documents/Controllers/CodeEditWindowController.swift
+@@ -98,6 +98,8 @@ final class CodeEditWindowController: NSWindowController, NSToolbarDelegate, Obs
+         navigator.titlebarSeparatorStyle = .none
+         navigator.minimumThickness = Self.minSidebarWidth
+         navigator.collapseBehavior = .useConstraints
++        navigator.holdingPriority = .init(100)
++
+         splitVC.addSplitViewItem(navigator)
+ 
+         let workspaceView = SettingsInjector {
+@@ -112,6 +114,8 @@ final class CodeEditWindowController: NSWindowController, NSToolbarDelegate, Obs
+             viewController: NSHostingController(rootView: workspaceView)
+         )
+         mainContent.titlebarSeparatorStyle = .line
++        mainContent.holdingPriority = .init(50)
++
+         splitVC.addSplitViewItem(mainContent)
+ 
+         let inspectorView = SettingsInjector {
+@@ -129,6 +133,7 @@ final class CodeEditWindowController: NSWindowController, NSToolbarDelegate, Obs
+         inspector.canCollapse = true
+         inspector.collapseBehavior = .useConstraints
+         inspector.isSpringLoaded = true
++        inspector.holdingPriority = .init(75)
+ 
+         splitVC.addSplitViewItem(inspector)
+ 
+diff --git a/CodeEdit/Features/StatusBar/Views/StatusBarDrawer/StatusBarDrawer.swift b/CodeEdit/Features/StatusBar/Views/StatusBarDrawer/StatusBarDrawer.swift
+index 4394f485..19c43885 100644
+--- a/CodeEdit/Features/StatusBar/Views/StatusBarDrawer/StatusBarDrawer.swift
++++ b/CodeEdit/Features/StatusBar/Views/StatusBarDrawer/StatusBarDrawer.swift
+@@ -50,8 +50,11 @@ struct StatusBarDrawer: View {
+                         Label("Debugger", systemImage: "ladybug")
+                             .tag(StatusBarTabType.debugger)
+                     }
++                    .listStyle(.automatic)
++                    .accentColor(.secondary)
+                     .collapsable()
+                     .collapsed($model.debuggerSidebarIsCollapsed)
++                    .holdingPriority(.init(2))
+                     .frame(minWidth: 200, idealWidth: 240, maxWidth: 400)
+                     .safeAreaInset(edge: .bottom, alignment: .leading) {
+                         HStack(spacing: 0) {
+@@ -114,6 +117,7 @@ struct StatusBarDrawer: View {
+                                 .frame(maxWidth: .infinity, maxHeight: .infinity)
+                         }
+                     }
++                    .holdingPriority(.init(1))
+                     .background {
+                         if useThemeBackground {
+                             Color(nsColor: backgroundColor)
+diff --git a/CodeEdit/WorkspaceView.swift b/CodeEdit/WorkspaceView.swift
+index c0ff9045..29510a1d 100644
+--- a/CodeEdit/WorkspaceView.swift
++++ b/CodeEdit/WorkspaceView.swift
+@@ -48,7 +48,6 @@ struct WorkspaceView: View {
+                             .safeAreaInset(edge: .bottom, spacing: 0) {
+                                 StatusBarView(proxy: proxy, collapsed: $terminalCollapsed)
+                             }
+-
+                         StatusBarDrawer()
+                             .collapsable()
+                             .collapsed($terminalCollapsed)
+
+commit b8943cdfec205e64086ffd63bd8fea55f902355e
+Author: Matthijs Eikelenboom <matthijs697@live.nl>
+Date:   Mon May 1 11:02:14 2023 +0200
+
+    Test fixes
+
+diff --git a/CodeEditTests/Features/CodeEditUI/CodeEditUITests.swift b/CodeEditTests/Features/CodeEditUI/CodeEditUITests.swift
+index d72e5579..73fccef9 100644
+--- a/CodeEditTests/Features/CodeEditUI/CodeEditUITests.swift
++++ b/CodeEditTests/Features/CodeEditUI/CodeEditUITests.swift
+@@ -88,7 +88,7 @@ final class CodeEditUIUnitTests: XCTestCase {
+     func testBranchPickerLight() throws {
+         let view = ToolbarBranchPicker(
+             shellClient: ShellClient(),
+-            workspace: nil
++            workspaceFileManager: nil
+         )
+         let hosting = NSHostingView(rootView: view)
+         hosting.appearance = .init(named: .aqua)
+@@ -99,7 +99,7 @@ final class CodeEditUIUnitTests: XCTestCase {
+     func testBranchPickerDark() throws {
+         let view = ToolbarBranchPicker(
+             shellClient: ShellClient(),
+-            workspace: nil
++            workspaceFileManager: nil
+         )
+         let hosting = NSHostingView(rootView: view)
+         hosting.appearance = .init(named: .darkAqua)
+diff --git a/CodeEditTests/Utils/WorkspaceClient/WorkspaceClientTests.swift b/CodeEditTests/Utils/WorkspaceClient/WorkspaceClientTests.swift
+index 6d0fa87a..0cd27fa6 100644
+--- a/CodeEditTests/Utils/WorkspaceClient/WorkspaceClientTests.swift
++++ b/CodeEditTests/Utils/WorkspaceClient/WorkspaceClientTests.swift
+@@ -34,13 +34,12 @@ final class WorkspaceClientUnitTests: XCTestCase {
+                 .appendingPathComponent($0)
+             try fakeData!.write(to: fileUrl)
+         }
+-        let client: WorkspaceClient = try .default(
+-            fileManager: .default,
+-            folderURL: directory,
++        let client = CEWorkspaceFileManager(
++            folderUrl: directory,
+             ignoredFilesAndFolders: []
+         )
+ 
+-        var newFiles: [WorkspaceClient.FileItem] = []
++        var newFiles: [CEWorkspaceFile] = []
+ 
+         cancellable = client
+             .getFiles
+@@ -80,13 +79,12 @@ final class WorkspaceClientUnitTests: XCTestCase {
+             try fakeData!.write(to: fileUrl)
+         }
+ 
+-        let client: WorkspaceClient = try .default(
+-            fileManager: .default,
+-            folderURL: directory,
++        let client = CEWorkspaceFileManager(
++            folderUrl: directory,
+             ignoredFilesAndFolders: []
+         )
+ 
+-        var newFiles: [WorkspaceClient.FileItem] = []
++        var newFiles: [CEWorkspaceFile] = []
+ 
+         cancellable = client
+             .getFiles
+
+commit 5e9b8821a1d514b447b5fcb2c0fa4e209adf50a0
+Merge: 39fc8a74 adf2187c
+Author: olivvein <olivier.veinand@gmail.com>
+Date:   Sat Jul 1 17:37:53 2023 +0200
+
+    On chatGptView: !!GitHub_Desktop<chatGptView>
+
+diff --cc CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+index 8084e1ec,8084e1ec..57b2ff25
+--- a/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ b/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+@@@ -50,8 -50,8 +50,8 @@@
+        "kind" : "remoteSourceControl",
+        "location" : "https://github.com/krzyzanowskim/STTextView.git",
+        "state" : {
+--        "revision" : "77a37aed80277467990c2c8d224ed951899446f0",
+--        "version" : "0.6.0"
+++        "revision" : "5abb0867a3882b7687218b0b69d8264de59f4a05",
+++        "version" : "0.6.7"
+        }
+      },
+      {
+
+commit b5de30507cd83c0e5d343f0de81575b31d848334
+Merge: 23262847 b7272abf
+Author: olivvein <olivier.veinand@gmail.com>
+Date:   Tue Jun 27 17:52:58 2023 +0200
+
+    On main: !!GitHub_Desktop<main>
+
+diff --cc CodeEdit.xcodeproj/project.pbxproj
+index 31d501fa,31d501fa..c99ab608
+--- a/CodeEdit.xcodeproj/project.pbxproj
++++ b/CodeEdit.xcodeproj/project.pbxproj
+@@@ -3178,7 -3178,7 +3178,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3208,11 -3208,11 +3208,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				BUNDLE_LOADER = "$(TEST_HOST)";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3235,11 -3235,11 +3236,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				CLANG_ENABLE_MODULES = YES;
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3263,12 -3263,12 +3265,12 @@@
+  			buildSettings = {
+  				CODE_SIGN_ENTITLEMENTS = OpenWithCodeEdit/OpenWithCodeEdit.entitlements;
+  				CODE_SIGN_IDENTITY = "-";
+--				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+  				INFOPLIST_FILE = OpenWithCodeEdit/Info.plist;
+@@@ -3367,7 -3367,7 +3369,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3397,11 -3397,11 +3399,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				BUNDLE_LOADER = "$(TEST_HOST)";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3424,11 -3424,11 +3427,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				CLANG_ENABLE_MODULES = YES;
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3452,12 -3452,12 +3456,12 @@@
+  			buildSettings = {
+  				CODE_SIGN_ENTITLEMENTS = OpenWithCodeEdit/OpenWithCodeEdit.entitlements;
+  				CODE_SIGN_IDENTITY = "-";
+--				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+  				INFOPLIST_FILE = OpenWithCodeEdit/Info.plist;
+@@@ -3485,12 -3485,12 +3489,12 @@@
+  			buildSettings = {
+  				CODE_SIGN_ENTITLEMENTS = OpenWithCodeEdit/OpenWithCodeEdit.entitlements;
+  				CODE_SIGN_IDENTITY = "-";
+--				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+  				INFOPLIST_FILE = OpenWithCodeEdit/Info.plist;
+@@@ -3518,12 -3518,12 +3522,12 @@@
+  			buildSettings = {
+  				CODE_SIGN_ENTITLEMENTS = OpenWithCodeEdit/OpenWithCodeEdit.entitlements;
+  				CODE_SIGN_IDENTITY = "-";
+--				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+  				INFOPLIST_FILE = OpenWithCodeEdit/Info.plist;
+@@@ -3689,7 -3689,7 +3693,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3727,7 -3727,7 +3731,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3757,11 -3757,11 +3761,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				BUNDLE_LOADER = "$(TEST_HOST)";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3784,11 -3784,11 +3789,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				BUNDLE_LOADER = "$(TEST_HOST)";
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3811,11 -3811,11 +3817,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				CLANG_ENABLE_MODULES = YES;
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3840,11 -3840,11 +3847,12 @@@
+  			buildSettings = {
+  				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+  				CLANG_ENABLE_MODULES = YES;
+++				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
+  				CODE_SIGN_STYLE = Automatic;
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 35;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+diff --cc CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+index 1cb61ef0,1cb61ef0..00000000
+deleted file mode 100644,100644
+--- a/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ /dev/null
+@@@ -1,257 -1,257 +1,0 @@@
+--{
+--  "pins" : [
+--    {
+--      "identity" : "anycodable",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/Flight-School/AnyCodable",
+--      "state" : {
+--        "revision" : "862808b2070cd908cb04f9aafe7de83d35f81b05",
+--        "version" : "0.6.7"
+--      }
+--    },
+--    {
+--      "identity" : "codeeditkit",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/CodeEditApp/CodeEditKit",
+--      "state" : {
+--        "revision" : "9ba3343ac53eb66a213a0a525604e297d8584a45",
+--        "version" : "0.1.0"
+--      }
+--    },
+--    {
+--      "identity" : "codeeditlanguages",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/CodeEditApp/CodeEditLanguages.git",
+--      "state" : {
+--        "revision" : "aa7d922b2aa783ae6f2a1a2cb7010ae62b700e17",
+--        "version" : "0.1.16"
+--      }
+--    },
+--    {
+--      "identity" : "codeeditsymbols",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/CodeEditApp/CodeEditSymbols",
+--      "state" : {
+--        "revision" : "fd704f0590489c10f28376dea2317e1b0c801024",
+--        "version" : "0.1.2"
+--      }
+--    },
+--    {
+--      "identity" : "codeedittextview",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/CodeEditApp/CodeEditTextView",
+--      "state" : {
+--        "revision" : "cc28ae52c8083c313b650784706e339b727646d9",
+--        "version" : "0.6.6"
+--      }
+--    },
+--    {
+--      "identity" : "collectionconcurrencykit",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/johnsundell/collectionconcurrencykit",
+--      "state" : {
+--        "revision" : "b4f23e24b5a1bff301efc5e70871083ca029ff95",
+--        "version" : "0.2.0"
+--      }
+--    },
+--    {
+--      "identity" : "concurrencyplus",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/ConcurrencyPlus",
+--      "state" : {
+--        "revision" : "8dc56499412a373d617d50d059116bccf44b9874",
+--        "version" : "0.4.2"
+--      }
+--    },
+--    {
+--      "identity" : "fseventswrapper",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/Frizlab/FSEventsWrapper",
+--      "state" : {
+--        "revision" : "e0c59a2ce2775e5f6642da6d19207445f10112d0",
+--        "version" : "1.0.2"
+--      }
+--    },
+--    {
+--      "identity" : "glob",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/Bouke/Glob",
+--      "state" : {
+--        "revision" : "deda6e163d2ff2a8d7e138e2c3326dbd71157faf",
+--        "version" : "1.0.5"
+--      }
+--    },
+--    {
+--      "identity" : "grdb.swift",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/groue/GRDB.swift.git",
+--      "state" : {
+--        "revision" : "dd7e7f39e8e4d7a22d258d9809a882f914690b01",
+--        "version" : "5.26.1"
+--      }
+--    },
+--    {
+--      "identity" : "jsonrpc",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/JSONRPC",
+--      "state" : {
+--        "revision" : "aa785ad404bdcf7ec692908b3905dd4c87e87141",
+--        "version" : "0.7.1"
+--      }
+--    },
+--    {
+--      "identity" : "languageclient",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/LanguageClient",
+--      "state" : {
+--        "revision" : "92beeecd0bb783da52227839ba6c55e43fc866ec",
+--        "version" : "0.5.1"
+--      }
+--    },
+--    {
+--      "identity" : "languageserverprotocol",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/LanguageServerProtocol",
+--      "state" : {
+--        "revision" : "cae01173f45b0518ae5533b083edd153633af984",
+--        "version" : "0.9.2"
+--      }
+--    },
+--    {
+--      "identity" : "logstream",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/CodeEditApp/LogStream",
+--      "state" : {
+--        "revision" : "afd2422c65c12822f26606408b4e39b9549c5e1a",
+--        "version" : "1.2.1"
+--      }
+--    },
+--    {
+--      "identity" : "processenv",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/ProcessEnv",
+--      "state" : {
+--        "revision" : "29487b6581bb785c372c611c943541ef4309d051",
+--        "version" : "0.3.1"
+--      }
+--    },
+--    {
+--      "identity" : "processservice",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/ProcessService",
+--      "state" : {
+--        "revision" : "369fb0379983d3b43c7d7ad62c4e91ee020e347c",
+--        "version" : "0.2.6"
+--      }
+--    },
+--    {
+--      "identity" : "rearrange",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/Rearrange",
+--      "state" : {
+--        "revision" : "8f97f721d8a08c6e01ab9f7460e53819bef72dfa",
+--        "version" : "1.5.3"
+--      }
+--    },
+--    {
+--      "identity" : "sparkle",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/sparkle-project/Sparkle.git",
+--      "state" : {
+--        "revision" : "2a98381dfe72e24bf593c5c06d2c4fc1763c3f19",
+--        "version" : "2.3.0"
+--      }
+--    },
+--    {
+--      "identity" : "sttextview",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/krzyzanowskim/STTextView.git",
+--      "state" : {
+--        "revision" : "5abb0867a3882b7687218b0b69d8264de59f4a05",
+--        "version" : "0.6.7"
+--      }
+--    },
+--    {
+--      "identity" : "swift-collections",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/apple/swift-collections.git",
+--      "state" : {
+--        "revision" : "937e904258d22af6e447a0b72c0bc67583ef64a2",
+--        "version" : "1.0.4"
+--      }
+--    },
+--    {
+--      "identity" : "swift-snapshot-testing",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/pointfreeco/swift-snapshot-testing.git",
+--      "state" : {
+--        "revision" : "f8a9c997c3c1dab4e216a8ec9014e23144cbab37",
+--        "version" : "1.9.0"
+--      }
+--    },
+--    {
+--      "identity" : "swiftlintplugin",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/lukepistrol/SwiftLintPlugin",
+--      "state" : {
+--        "revision" : "d3ec7fb242ebe1d8e23bf17e58a1e27d43125994",
+--        "version" : "0.2.6"
+--      }
+--    },
+--    {
+--      "identity" : "swiftterm",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/migueldeicaza/SwiftTerm.git",
+--      "state" : {
+--        "revision" : "55e7cdbeb3f41c80cce7b8a29ce9d17e214b2e77",
+--        "version" : "1.2.0"
+--      }
+--    },
+--    {
+--      "identity" : "swifttreesitter",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/SwiftTreeSitter.git",
+--      "state" : {
+--        "revision" : "df25a52f72ebc5b50ae20d26d1363793408bb28b",
+--        "version" : "0.7.1"
+--      }
+--    },
+--    {
+--      "identity" : "swiftui-introspect",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/siteline/SwiftUI-Introspect",
+--      "state" : {
+--        "revision" : "84196bab1c7f05ad8c3c2a5bfb3058b1211e189f",
+--        "version" : "0.6.1"
+--      }
+--    },
+--    {
+--      "identity" : "swiftui-windowmanagement",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/Wouter01/SwiftUI-WindowManagement",
+--      "state" : {
+--        "revision" : "03642ad06a3aa51e8284eb22146a208269cdc1ca",
+--        "version" : "2.1.0"
+--      }
+--    },
+--    {
+--      "identity" : "textformation",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/TextFormation",
+--      "state" : {
+--        "revision" : "f07ecbdb8daab6cdb5344a88e8685ae55a7a44c3",
+--        "version" : "0.6.8"
+--      }
+--    },
+--    {
+--      "identity" : "textstory",
+--      "kind" : "remoteSourceControl",
+--      "location" : "https://github.com/ChimeHQ/TextStory",
+--      "state" : {
+--        "revision" : "b7b3fc551bd0177c32b3dc46d0478e9f0b6f8c6f",
+--        "version" : "0.7.2"
+--      }
+--    }
+--  ],
+--  "version" : 2
+--}
+
+commit dff088be985c6edc214e99ecfc3e7e450a405c58
+Merge: 39fc8a74 b706aaac
+Author: olivvein <olivier.veinand@gmail.com>
+Date:   Sat Jul 1 17:36:36 2023 +0200
+
+    On chatGptView: !!GitHub_Desktop<chatGptView>
+
+diff --cc CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+index 8084e1ec,8084e1ec..57b2ff25
+--- a/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ b/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+@@@ -50,8 -50,8 +50,8 @@@
+        "kind" : "remoteSourceControl",
+        "location" : "https://github.com/krzyzanowskim/STTextView.git",
+        "state" : {
+--        "revision" : "77a37aed80277467990c2c8d224ed951899446f0",
+--        "version" : "0.6.0"
+++        "revision" : "5abb0867a3882b7687218b0b69d8264de59f4a05",
+++        "version" : "0.6.7"
+        }
+      },
+      {
+
+commit 28f4152223b2ba2c9a39d153ef1de61e84e49775
+Merge: 39fc8a74 7fc0b20a
+Author: olivvein <olivier.veinand@gmail.com>
+Date:   Sat Jul 1 17:30:50 2023 +0200
+
+    On chatGptView: !!GitHub_Desktop<chatGptView>
+
+diff --cc CodeEdit.xcodeproj/project.pbxproj
+index fda81b37,fda81b37..46e5b7ff
+--- a/CodeEdit.xcodeproj/project.pbxproj
++++ b/CodeEdit.xcodeproj/project.pbxproj
+@@@ -275,7 -275,7 +275,6 @@@
+  		6C48D8F72972E5F300D6D205 /* WindowObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C48D8F62972E5F300D6D205 /* WindowObserver.swift */; };
+  		6C5228B529A868BD00AC48F6 /* Environment+ContentInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5228B429A868BD00AC48F6 /* Environment+ContentInsets.swift */; };
+  		6C53AAD829A6C4FD00EE9ED6 /* SplitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C53AAD729A6C4FD00EE9ED6 /* SplitView.swift */; };
+--		6C5AB9D729C1496E003B5F96 /* SceneID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5AB9D629C1496E003B5F96 /* SceneID.swift */; };
+  		6C5B63DE29C76213005454BA /* WindowCodeFileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5B63DD29C76213005454BA /* WindowCodeFileView.swift */; };
+  		6C5FDF7A29E6160000BC08C0 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C5FDF7929E6160000BC08C0 /* AppSettings.swift */; };
+  		6C7256D729A3D7D000C2D3E0 /* SplitViewControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C7256D629A3D7D000C2D3E0 /* SplitViewControllerView.swift */; };
+@@@ -2377,7 -2377,7 +2376,7 @@@
+  			attributes = {
+  				BuildIndependentTargetsInParallel = 1;
+  				LastSwiftUpdateCheck = 1330;
+--				LastUpgradeCheck = 1410;
+++				LastUpgradeCheck = 1430;
+  				TargetAttributes = {
+  					2BE487EB28245162003F3F64 = {
+  						CreatedOnToolsVersion = 13.3.1;
+@@@ -2712,7 -2712,7 +2711,6 @@@
+  				6CB9144B29BEC7F100BC47F2 /* (null) in Sources */,
+  				587B9E7429301D8F00AC7927 /* URL+URLParameters.swift in Sources */,
+  				581BFB6B2926431000D251EC /* RecentProjectItem.swift in Sources */,
+--				6C5AB9D729C1496E003B5F96 /* SceneID.swift in Sources */,
+  				587B9DA429300ABD00AC7927 /* OverlayPanel.swift in Sources */,
+  				58D01C95293167DC00C5B6B4 /* Bundle+Info.swift in Sources */,
+  				587D9B762933BF5700BF7490 /* Mocks.swift in Sources */,
+@@@ -3016,7 -3016,7 +3014,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3043,7 -3043,7 +3041,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3201,7 -3201,7 +3199,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3228,7 -3228,7 +3226,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3290,7 -3290,7 +3288,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+  				INFOPLIST_FILE = OpenWithCodeEdit/Info.plist;
+@@@ -3487,7 -3487,7 +3485,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				DEAD_CODE_STRIPPING = YES;
+  				DEVELOPMENT_ASSET_PATHS = "\"CodeEdit/Preview Content\"";
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				ENABLE_HARDENED_RUNTIME = YES;
+  				ENABLE_PREVIEWS = YES;
+  				GENERATE_INFOPLIST_FILE = NO;
+@@@ -3554,7 -3554,7 +3552,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3581,7 -3581,7 +3579,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3608,7 -3608,7 +3606,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+@@@ -3637,7 -3637,7 +3635,7 @@@
+  				COMBINE_HIDPI_IMAGES = YES;
+  				CURRENT_PROJECT_VERSION = 32;
+  				DEAD_CODE_STRIPPING = YES;
+--				DEVELOPMENT_TEAM = "";
+++				DEVELOPMENT_TEAM = 27GSQ5633S;
+  				GENERATE_INFOPLIST_FILE = YES;
+  				LD_RUNPATH_SEARCH_PATHS = (
+  					"$(inherited)",
+diff --cc CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+index 8084e1ec,8084e1ec..57b2ff25
+--- a/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
++++ b/CodeEdit.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/Package.resolved
+@@@ -50,8 -50,8 +50,8 @@@
+        "kind" : "remoteSourceControl",
+        "location" : "https://github.com/krzyzanowskim/STTextView.git",
+        "state" : {
+--        "revision" : "77a37aed80277467990c2c8d224ed951899446f0",
+--        "version" : "0.6.0"
+++        "revision" : "5abb0867a3882b7687218b0b69d8264de59f4a05",
+++        "version" : "0.6.7"
+        }
+      },
+      {
+diff --cc CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
+index 3f46d9ce,3f46d9ce..97eb1050
+--- a/CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
++++ b/CodeEdit.xcodeproj/xcshareddata/xcschemes/CodeEdit.xcscheme
+@@@ -1,6 -1,6 +1,6 @@@
+  <?xml version="1.0" encoding="UTF-8"?>
+  <Scheme
+--   LastUpgradeVersion = "1410"
+++   LastUpgradeVersion = "1430"
+     version = "1.3">
+     <BuildAction
+        parallelizeBuildables = "YES"
+
+tree 96fa132c389b195d8a583aa860c6a511433653fe
+
+.all-contributorsrc
+.github/
+.gitignore
+.swiftlint.yml
+AppCast/
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+CodeEdit.xcodeproj/
+CodeEdit/
+CodeEditTests/
+Configs/
+Documentation.docc/
+LICENSE.md
+OpenWithCodeEdit/
+README.md
